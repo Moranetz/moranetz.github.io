@@ -1,45 +1,59 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<title>Frame &amp; Fork — Privacy Policy</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index,follow"><style>
-:root { --fg:#1a1a1a; --muted:#555; --bg:#fff; --accent:#0066cc; --rule:#e5e5e5; }
-@media (prefers-color-scheme: dark){ :root{ --fg:#e8e8e8; --muted:#a0a0a0; --bg:#111; --accent:#66aaff; --rule:#2a2a2a; } }
-body{ font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; color:var(--fg); background:var(--bg); max-width:720px; margin:3rem auto; padding:0 1.5rem 4rem; }
-h1,h2,h3{ line-height:1.2; } h1{ font-size:2rem; margin-bottom:.25rem; }
-h2{ font-size:1.3rem; margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--rule); }
-h3{ font-size:1.05rem; margin-top:1.5rem; } p,ul,ol{ margin:.8rem 0; }
-strong{ color:var(--fg); font-weight:600; }
-em.summary{ display:block; font-style:italic; color:var(--muted); padding:1rem; background:var(--rule); border-radius:8px; }
-a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; border-radius:3px; font-size:.9em; }
-.effective,.contact{ color:var(--muted); font-size:.95rem; }
-.contact{ font-size:1.1rem; padding:1rem 1.25rem; background:var(--rule); border-radius:8px; color:var(--fg); }
-</style></head><body>
+<title>Frame &amp; Fork — Privacy Policy</title>
+<style>
+  body { max-width: 720px; margin: 40px auto; padding: 0 20px; font: 16px/1.6 -apple-system, system-ui, sans-serif; color: #1a1a1a; }
+  h1 { font-size: 26px; } h2 { font-size: 18px; margin-top: 28px; }
+  .updated { color: #666; font-size: 14px; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
 <h1>Frame &amp; Fork — Privacy Policy</h1>
-<p class="effective">Effective: 2026-05-16 · Developer: Marion Moranetz</p>
-<em class="summary"><strong>Frame &amp; Fork</strong> is local-first. What you create or track stays on your device. It does not collect your personal information, sell your data, share it with advertisers, or transmit it to any server I control. Where data leaves your device it is only to deliver a feature you explicitly invoked (iCloud sync, a share sheet, Apple Health). No identifying analytics.</em>
-<h2>What is collected</h2>
-<h3>Nothing that identifies you, by default.</h3>
-<p>Frame &amp; Fork stores its data locally using iOS's standard <code>UserDefaults</code>, on-device files, or (where the app integrates with it) Apple HealthKit. This data:</p>
+<p class="updated">Last updated: 25 June 2026</p>
+
+<p>Frame &amp; Fork is local-first. Your puzzles, ratings, streaks, lessons progress, saved
+games, and your Company Profile are stored on your device. The app has no accounts, no login,
+no advertising, no third-party analytics, and no tracking SDKs.</p>
+
+<h2>The one time data leaves your device: AI role-play (optional, Pro)</h2>
+<p>The optional live role-play feature sends data to a third party, and you should know exactly
+what and when:</p>
 <ul>
-<li>Stays on your device unless you explicitly share it (export, share sheet, iCloud)</li>
-<li>Is not transmitted to me, my servers, or any third party</li>
-<li>Is encrypted by iOS using your device passcode and the iOS Data Protection class</li>
+  <li><strong>What is sent:</strong> the messages you type during a role-play, the buyer
+  persona setup for that session, and — only if you fill it in — your <em>Company Profile</em>
+  (what you sell and the objections you face). This text is sent to generate the AI buyer's
+  replies and your post-game coaching grade.</li>
+  <li><strong>Where it goes:</strong> directly from your device to <strong>Anthropic</strong>
+  (the maker of Claude), using the Anthropic API key <strong>you</strong> enter in Settings.
+  The request is made under your own Anthropic account. It does <strong>not</strong> pass
+  through, and is not stored on, any server the developer controls.</li>
+  <li><strong>How Anthropic handles it:</strong> governed by your agreement with Anthropic and
+  Anthropic's privacy policy (<a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>).
+  Anthropic states it does not train its models on API inputs by default.</li>
+  <li><strong>If you never enter a key,</strong> the role-play feature is unavailable and
+  <strong>no data ever leaves your device</strong> — the puzzles, lessons, and master games
+  are fully local.</li>
 </ul>
-<h3>Possible exceptions</h3>
-<p>If the app offers iCloud sync, data syncs to <strong>your</strong> iCloud account via Apple CloudKit — I cannot see it. If it integrates with Apple Health, Calendar, Photos, or Files via the standard system pickers, each access is authorized by you at the moment you take that action. If it offers Sign in with Apple, only your Apple ID identifier is used — never your name or email unless you choose to share them, and nothing is stored on a server.</p>
-<h2>Third-party services</h2>
-<p>Frame &amp; Fork does <strong>not</strong> use third-party analytics (Mixpanel, Amplitude, Segment), advertising SDKs (AdMob, Facebook Audience Network, Unity Ads), off-device crash reporters (Sentry, Crashlytics, Bugsnag), or tracking SDKs. If this ever changes, this policy and the app's release notes will say so.</p>
-<h2>Children's privacy (COPPA)</h2>
-<p>Frame &amp; Fork is not directed at children under 13 and does not knowingly collect data from anyone. If you have a concern, contact me at the address below.</p>
-<h2>Your rights</h2>
-<ul>
-<li><strong>Delete your data:</strong> delete the app, or use any in-app reset/clear option.</li>
-<li><strong>Export your data:</strong> if the app supports export, it's in Settings; if not, contact me.</li>
-<li><strong>Stop tracking:</strong> there is nothing to stop — Frame &amp; Fork does not track you.</li>
-</ul>
-<p>For users under GDPR, CCPA, LGPD, or similar: because no personal data is collected on any server I control, there is no controller-side data to access, port, or erase. Local data is governed by Apple's iOS standards and your control of your device.</p>
-<h2>Changes</h2>
-<p>Updates get a new "Effective" date here and a note in the next App Store release notes.</p>
+
+<h2>Your API key</h2>
+<p>Your Anthropic API key is stored in the iOS Keychain on your device and is used only to make
+those role-play requests to Anthropic. It is never transmitted to the developer.</p>
+
+<h2>What is NOT collected</h2>
+<p>No personal information is collected on any server the developer controls. No advertising
+SDKs, no third-party analytics (Mixpanel, Amplitude, Segment), no off-device crash reporters,
+no tracking. The developer cannot see your role-play content, your ratings, or your Company
+Profile.</p>
+
+<h2>Deleting your data</h2>
+<p>Settings → "Clear all data" erases your local progress, saved games, and Company Profile
+from the device. Removing the app removes everything stored locally.</p>
+
 <h2>Contact</h2>
-<p>Privacy questions or concerns: <a href="mailto:Marion.m.moranetz@gmail.com"><strong>Marion.m.moranetz@gmail.com</strong></a></p>
-</body></html>
+<p>Questions: see the <a href="https://moranetz.github.io/apps/frame-fork/support.html">support page</a>.</p>
+</body>
+</html>
