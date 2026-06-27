@@ -1575,7 +1575,7 @@ document.querySelectorAll('.bottle').forEach(bottle => {
     if (isOpened) {
       bottle.classList.remove('opened');
       Snd.capClose();
-      const cancel = springClose(cap);
+      const cancel = springClose(cap, () => activeAnims.delete(idx));
       activeAnims.set(idx, cancel);
     } else {
       // close any other opened bottle
@@ -1584,7 +1584,8 @@ document.querySelectorAll('.bottle').forEach(bottle => {
         const bCap = b.querySelector('.cap');
         b.classList.remove('opened');
         if (activeAnims.has(bIdx)) { activeAnims.get(bIdx)(); activeAnims.delete(bIdx); }
-        springClose(bCap);
+        const bCancel = springClose(bCap, () => activeAnims.delete(bIdx));
+        activeAnims.set(bIdx, bCancel);
       });
       bottle.classList.add('opened');
       Snd.capOpen();
