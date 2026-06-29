@@ -16,17 +16,17 @@ a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; borde
 </style></head><body>
 <h1>Forecast: Cycle Syncing — Privacy Policy</h1>
 <p class="effective">Effective: 2026-05-16 · Developer: Marion Moranetz</p>
-<em class="summary"><strong>Forecast: Cycle Syncing</strong> is local-first. What you create or track stays on your device. It does not collect your personal information, sell your data, share it with advertisers, or transmit it to any server I control. Where data leaves your device it is only to deliver a feature you explicitly invoked (iCloud sync, a share sheet, Apple Health). No identifying analytics.</em>
+<em class="summary"><strong>Forecast: Cycle Syncing</strong> is local-first. What you create or track stays on your device. It does not collect your personal information, sell your data, share it with advertisers, or transmit it to any server I control. It has no user account, no iCloud sync, and makes no network requests of its own. It can read cycle and basal-temperature data from Apple Health only when you grant permission, and that data stays on your device. No identifying analytics.</em>
 <h2>What is collected</h2>
 <h3>Nothing that identifies you, by default.</h3>
 <p>Forecast: Cycle Syncing stores its data locally using iOS's standard <code>UserDefaults</code>, on-device files, or (where the app integrates with it) Apple HealthKit. This data:</p>
 <ul>
-<li>Stays on your device unless you explicitly share it (export, share sheet, iCloud)</li>
+<li>Stays on your device unless you explicitly export or share it</li>
 <li>Is not transmitted to me, my servers, or any third party</li>
 <li>Is encrypted by iOS using your device passcode and the iOS Data Protection class</li>
 </ul>
 <h3>Possible exceptions</h3>
-<p>If the app offers iCloud sync, data syncs to <strong>your</strong> iCloud account via Apple CloudKit — I cannot see it. If it integrates with Apple Health, Calendar, Photos, or Files via the standard system pickers, each access is authorized by you at the moment you take that action. If it offers Sign in with Apple, only your Apple ID identifier is used — never your name or email unless you choose to share them, and nothing is stored on a server.</p>
+<p>Forecast does not use iCloud sync, does not offer Sign in with Apple, and has no user accounts or servers. Its one system integration is Apple Health: with your permission it reads menstrual-flow and basal body temperature (and, if you allow, body mass and sleep) to inform the forecast. That access is read-only, happens on your device, and the data is never transmitted off it.</p>
 <h2>Third-party services</h2>
 <p>Forecast: Cycle Syncing does <strong>not</strong> use third-party analytics (Mixpanel, Amplitude, Segment), advertising SDKs (AdMob, Facebook Audience Network, Unity Ads), off-device crash reporters (Sentry, Crashlytics, Bugsnag), or tracking SDKs. If this ever changes, this policy and the app's release notes will say so.</p>
 <h2>Children's privacy (COPPA)</h2>
