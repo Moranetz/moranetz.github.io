@@ -15,29 +15,33 @@ a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; borde
 .contact{ font-size:1.1rem; padding:1rem 1.25rem; background:var(--rule); border-radius:8px; color:var(--fg); }
 </style></head><body>
 <h1>Forecast: Cycle Syncing — Privacy Policy</h1>
-<p class="effective">Effective: 2026-05-16 · Developer: Marion Moranetz</p>
-<em class="summary"><strong>Forecast: Cycle Syncing</strong> is local-first. What you create or track stays on your device. It does not collect your personal information, sell your data, share it with advertisers, or transmit it to any server I control. Where data leaves your device it is only to deliver a feature you explicitly invoked (iCloud sync, a share sheet, Apple Health). No identifying analytics.</em>
-<h2>What is collected</h2>
-<h3>Nothing that identifies you, by default.</h3>
-<p>Forecast: Cycle Syncing stores its data locally using iOS's standard <code>UserDefaults</code>, on-device files, or (where the app integrates with it) Apple HealthKit. This data:</p>
+<p class="effective">Effective: 2026-07-03 · Developer: Marion Moranetz</p>
+<em class="summary"><strong>Forecast: Cycle Syncing</strong> keeps everything on your device. There is no account, no cloud, no server, and no analytics. Your cycle data is encrypted at rest and excluded from device backups. Nothing you log is transmitted anywhere, and nothing on your lock screen names what the app really tracks.</em>
+<h2>What the app stores, and where</h2>
+<p>Three kinds of data, all created by you, all on your device:</p>
 <ul>
-<li>Stays on your device unless you explicitly share it (export, share sheet, iCloud)</li>
-<li>Is not transmitted to me, my servers, or any third party</li>
-<li>Is encrypted by iOS using your device passcode and the iOS Data Protection class</li>
+<li><strong>Period dates</strong> you log, and the cycle statistics computed from them</li>
+<li><strong>Morning temperatures</strong>, if you choose to log them</li>
+<li><strong>Preferences</strong> such as cycle length and whether notifications are on</li>
 </ul>
-<h3>Possible exceptions</h3>
-<p>If the app offers iCloud sync, data syncs to <strong>your</strong> iCloud account via Apple CloudKit — I cannot see it. If it integrates with Apple Health, Calendar, Photos, or Files via the standard system pickers, each access is authorized by you at the moment you take that action. If it offers Sign in with Apple, only your Apple ID identifier is used — never your name or email unless you choose to share them, and nothing is stored on a server.</p>
-<h2>Third-party services</h2>
-<p>Forecast: Cycle Syncing does <strong>not</strong> use third-party analytics (Mixpanel, Amplitude, Segment), advertising SDKs (AdMob, Facebook Audience Network, Unity Ads), off-device crash reporters (Sentry, Crashlytics, Bugsnag), or tracking SDKs. If this ever changes, this policy and the app's release notes will say so.</p>
+<p>Cycle data and temperatures live in an encrypted on-device file protected by iOS Data Protection (locked until you first unlock the device after a restart) and <strong>excluded from iCloud and computer backups</strong>, so they never ride along in a backup you didn't think about. Only non-sensitive flags (for example, "onboarding is done") use standard <code>UserDefaults</code>.</p>
+<h2>What the app never touches</h2>
+<ul>
+<li><strong>No network.</strong> The app makes no network requests. There is no server to send anything to.</li>
+<li><strong>No Apple Health.</strong> The app neither reads from nor writes to HealthKit.</li>
+<li><strong>No account, no sign-in, no iCloud sync, no export upload.</strong></li>
+<li><strong>No third-party code that collects data</strong>: no analytics SDKs, no advertising SDKs, no off-device crash reporters, no tracking. The app does not read the IDFA or any device identifier.</li>
+</ul>
+<h2>Notifications and widgets</h2>
+<p>Notifications are scheduled locally on your device; no push server is involved. Their wording is deliberately weather-only, so nothing readable on your lock screen names periods, fertility, or ovulation. Home-screen widgets read a file-protected payload in a private container shared only between the app and its widgets, and use the same weather language. You can turn notifications off anytime in iOS Settings → Notifications → Forecast.</p>
 <h2>Children's privacy (COPPA)</h2>
 <p>Forecast: Cycle Syncing is not directed at children under 13 and does not knowingly collect data from anyone. If you have a concern, contact me at the address below.</p>
 <h2>Your rights</h2>
 <ul>
-<li><strong>Delete your data:</strong> delete the app, or use any in-app reset/clear option.</li>
-<li><strong>Export your data:</strong> if the app supports export, it's in Settings; if not, contact me.</li>
-<li><strong>Stop tracking:</strong> there is nothing to stop — Forecast: Cycle Syncing does not track you.</li>
+<li><strong>Delete your data:</strong> delete the app. Because everything lives inside the app's container and is excluded from backups, deleting the app deletes the data.</li>
+<li><strong>Stop tracking:</strong> there is nothing to stop. The app does not track you.</li>
 </ul>
-<p>For users under GDPR, CCPA, LGPD, or similar: because no personal data is collected on any server I control, there is no controller-side data to access, port, or erase. Local data is governed by Apple's iOS standards and your control of your device.</p>
+<p>For users under GDPR, CCPA, LGPD, or similar: because no personal data is collected on any server I control, there is no controller-side data to access, port, or erase. Local data is governed by Apple's iOS protections and your control of your device.</p>
 <h2>Changes</h2>
 <p>Updates get a new "Effective" date here and a note in the next App Store release notes.</p>
 <h2>Contact</h2>
