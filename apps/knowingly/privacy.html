@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Knowingly — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow"><style>
+:root { --fg:#1a1a1a; --muted:#555; --bg:#fff; --accent:#0066cc; --rule:#e5e5e5; }
+@media (prefers-color-scheme: dark){ :root{ --fg:#e8e8e8; --muted:#a0a0a0; --bg:#111; --accent:#66aaff; --rule:#2a2a2a; } }
+body{ font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; color:var(--fg); background:var(--bg); max-width:720px; margin:3rem auto; padding:0 1.5rem 4rem; }
+h1,h2,h3{ line-height:1.2; } h1{ font-size:2rem; margin-bottom:.25rem; }
+h2{ font-size:1.3rem; margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--rule); }
+h3{ font-size:1.05rem; margin-top:1.5rem; } p,ul,ol{ margin:.8rem 0; }
+strong{ color:var(--fg); font-weight:600; }
+em.summary{ display:block; font-style:italic; color:var(--muted); padding:1rem; background:var(--rule); border-radius:8px; }
+a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; border-radius:3px; font-size:.9em; }
+.effective,.contact{ color:var(--muted); font-size:.95rem; }
+.contact{ font-size:1.1rem; padding:1rem 1.25rem; background:var(--rule); border-radius:8px; color:var(--fg); }
+</style></head><body>
+<h1>Knowingly — Privacy Policy</h1>
+<p class="effective">Effective: 2026-05-15 · Developer: Marion Moranetz</p>
+<em class="summary"><strong>Knowingly</strong> runs no backend. Nothing leaves your phone except the message bubbles you choose to send inside iMessage. There is no account, no email collected, no analytics SDK, no advertising SDK.</em>
+<h2>What is collected</h2>
+<ul>
+<li><strong>Markets, bets, calibration scores:</strong> stored locally on your device using App Groups (<code>group.com.moranetz.knowingly</code>) so the main app and the iMessage extension can share state.</li>
+<li><strong>Friend names:</strong> typed by you when you set up your group. Stored locally.</li>
+<li><strong>Subject opt-in receipts and votes:</strong> stored locally per device.</li>
+</ul>
+<p>None of this is transmitted to me, my servers, or any third party. There are no servers.</p>
+<h2>What is sent</h2>
+<p>When you tap "Send" inside the iMessage extension, an <code>MSMessage</code> carrying the market question, subject name, group name, and the snapshot probability at send time is inserted into the iMessage conversation. From that point Apple's Messages infrastructure handles delivery — Apple's privacy policy governs the transit.</p>
+<h2>What recipients see</h2>
+<p>If a recipient has Knowingly installed, tapping the bubble opens the extension and displays the market with their own device-local state. If they don't have it installed, they see the bubble image with caption only.</p>
+<h2>Third-party services</h2>
+<p>Knowingly does <strong>not</strong> use third-party analytics (Mixpanel, Amplitude, Segment), advertising SDKs (AdMob, Facebook Audience Network, Unity Ads), off-device crash reporters (Sentry, Crashlytics, Bugsnag), or tracking SDKs. If this ever changes, this policy and the app's release notes will say so.</p>
+<h2>Children's privacy (COPPA)</h2>
+<p>Knowingly is rated 12+ and does not knowingly collect personal information from children under 13. If you have a concern, contact me at the address below.</p>
+<h2>Your rights</h2>
+<ul>
+<li><strong>Delete your data:</strong> delete the app; all locally stored data goes with it.</li>
+<li><strong>Stop tracking:</strong> there is nothing to stop — Knowingly does not track you.</li>
+</ul>
+<p>For users under GDPR, CCPA, LGPD, or similar: because no personal data is collected on any server I control, there is no controller-side data to access, port, or erase. Local data is governed by Apple's iOS standards and your control of your device.</p>
+<h2>Changes</h2>
+<p>Updates get a new "Effective" date here and a note in the next App Store release notes.</p>
+<h2>Contact</h2>
+<p>Privacy questions or concerns: <a href="mailto:Marion.m.moranetz@gmail.com"><strong>Marion.m.moranetz@gmail.com</strong></a></p>
+</body></html>
