@@ -688,6 +688,18 @@ header .tagline {
   box-shadow: 0 6px 0 rgba(0,0,0,0.3), 0 10px 24px rgba(0,0,0,0.4), 0 0 20px var(--item-glow, rgba(139,108,255,0.08));
   border-color: rgba(255,255,255,0.08);
 }
+.shelf-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+  stroke: rgba(255,255,255,0.75);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: stroke 0.25s;
+}
+.shelf-item:hover .shelf-icon svg { stroke: rgba(255,255,255,0.95); }
 .shelf-icon {
   font-size: 24px;
   line-height: 1;
@@ -875,8 +887,8 @@ footer p {
   <h1>moranetz</h1>
   <p class="subtitle">pharmacy &mdash; behavioral compounds</p>
   <p class="tagline">I build tools that make invisible systems visible.</p>
-  <p class="header-intro">You&rsquo;ve seen portfolios before. Probably too many this week. Most of them list the same frameworks, show the same todo apps, claim the same passion for clean code. And somewhere around the twentieth one, you stopped reading the descriptions and started just scanning for something that felt different.</p>
-  <p class="header-intro">That instinct is right. Because what you&rsquo;re actually looking for isn&rsquo;t on the resume.</p>
+  <p class="header-intro">You&rsquo;ve seen a lot of portfolios this week, and somewhere around the twentieth you stopped reading the descriptions and started scanning for one that didn&rsquo;t look like the other nineteen.</p>
+  <p class="header-intro">So this one is stocked like a pharmacy: every project below is a compound, labeled by what it does to the person using it.</p>
   <p class="header-stats">17 iOS apps shipped &middot; 39 public repos &middot; Bayesian-meta-analysis of 39 persuasion techniques &middot; Everything rendered from first principles.</p>
 </header>
 
@@ -933,32 +945,32 @@ footer p {
 
   <div class="counter-shelf">
     <a class="shelf-item" href="resume.html" style="--item-glow:rgba(180,120,40,0.15)">
-      <div class="shelf-icon">📋</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="5" y="4.5" width="16" height="18" rx="2"/><path d="M10 4.5v-1h6v2.5h-6v-1.5"/><path d="M9.5 11h7M9.5 14.5h7M9.5 18h4.5"/></svg></div>
       <div class="shelf-label">Resume</div>
       <div class="shelf-sub">Clinical<br>history</div>
     </a>
     <a class="shelf-item" href="https://linkedin.com/in/marionmoranetz" target="_blank" style="--item-glow:rgba(10,102,194,0.12)">
-      <div class="shelf-icon">💼</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3.5" y="8" width="19" height="13" rx="2"/><path d="M9.5 8V6.2A1.7 1.7 0 0 1 11.2 4.5h3.6a1.7 1.7 0 0 1 1.7 1.7V8"/><path d="M3.5 13.5h19"/><path d="M11.5 13.5v2h3v-2"/></svg></div>
       <div class="shelf-label">LinkedIn</div>
       <div class="shelf-sub">Professional<br>referral</div>
     </a>
     <a class="shelf-item" href="https://instagram.com/marionmoranetz" target="_blank" style="--item-glow:rgba(225,48,108,0.12)">
-      <div class="shelf-icon">📸</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="7" width="20" height="14" rx="2.5"/><path d="M9 7l1.4-2.5h5.2L17 7"/><circle cx="13" cy="14" r="4"/><circle cx="19.5" cy="10.5" r="0.4"/></svg></div>
       <div class="shelf-label">Instagram</div>
       <div class="shelf-sub">Visual<br>catalog</div>
     </a>
     <a class="shelf-item" href="https://youtube.com/@marionmoranetz" target="_blank" style="--item-glow:rgba(255,0,0,0.1)">
-      <div class="shelf-icon">🎬</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="5.5" width="20" height="15" rx="3"/><path d="M11 9.8v6.4l5.5-3.2z"/></svg></div>
       <div class="shelf-label">YouTube</div>
       <div class="shelf-sub">Lab<br>footage</div>
     </a>
     <a class="shelf-item" href="https://x.com/marionmoranetz" target="_blank" style="--item-glow:rgba(255,255,255,0.06)">
-      <div class="shelf-icon">𝕏</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5.5 5.5l15 15M20.5 5.5l-15 15"/></svg></div>
       <div class="shelf-label">Twitter</div>
       <div class="shelf-sub">Daily<br>bulletin</div>
     </a>
     <a class="shelf-item" href="https://github.com/moranetz" target="_blank" style="--item-glow:rgba(139,108,255,0.12)">
-      <div class="shelf-icon">⚗️</div>
+      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M10.5 4h5"/><path d="M12 4v6.2L6.2 19a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 10.2V4"/><path d="M8.6 16.5h8.8"/></svg></div>
       <div class="shelf-label">GitHub</div>
       <div class="shelf-sub">80 formulas<br>in stock</div>
     </a>
