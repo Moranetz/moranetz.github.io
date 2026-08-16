@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CalTracker — Privacy Policy</title>
+<title>Squatch — Privacy Policy</title>
 <style>
   :root { --ink:#0a0a0a; --grey:#6b6b6b; --hair:#e5e5ea; --bg:#fff; }
   html,body { margin:0; padding:0; background:var(--bg); color:var(--ink);
@@ -15,6 +15,7 @@
   h2 { font-size:19px; margin:32px 0 8px; }
   p,li { color:#1a1a1a; }
   ul { padding-left:20px; }
+  li { margin-bottom:6px; }
   a { color:var(--ink); }
   code { background:#f5f5f7; padding:1px 6px; border-radius:6px;
     font-size:0.92em; }
@@ -24,66 +25,88 @@
 </head>
 <body><main>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 2026-05-23</p>
+<p class="updated">Squatch · Last updated: 2026-08-15</p>
 
-<p>CalTracker (the "App", "we") is built to keep your nutrition data on
-your device and under your control. This page explains exactly what is
-collected, what stays local, and what (if anything) is sent off-device.</p>
+<p>Squatch keeps what you log on your phone. This page says exactly what the
+app stores, what it sends, and what it does not.</p>
 
-<h2>What stays on your device only</h2>
+<h2>What the app stores on your device</h2>
 <ul>
-  <li>Your food log entries, weigh-ins, goals, and onboarding answers.
-      All of it is stored in a local SwiftData container.</li>
-  <li>Your iCloud-synced copy, if you have iCloud enabled, lives in your
-      private iCloud account. We cannot read it.</li>
-  <li>Your Apple Health reads and writes, governed by the permissions
-      you grant Apple Health directly.</li>
+  <li>Food entries, weigh-ins, goals, fullness and mood entries, squat and
+      training records, and your onboarding answers. These live in a local
+      database on the device.</li>
+  <li>If you have iCloud turned on, that database syncs through your own
+      private iCloud account so your phone and your other devices agree. It
+      sits in your Apple account, not on any server belonging to us, and we
+      cannot read it.</li>
+  <li>Settings and preferences, stored locally alongside it.</li>
 </ul>
 
-<h2>What may be sent off-device</h2>
+<h2>Apple Health</h2>
+<p>Squatch reads and writes Apple Health only after you grant permission, and
+only the categories you allow. It reads active energy burned, steps, body
+mass, sleep, blood glucose, and dietary energy. It writes the food you log
+back to Health as dietary energy and nutrition, so other apps you use can see
+it.</p>
+<p>Health data moves between the app and Apple Health on the device. It is
+never sent anywhere else. You can revoke access at any time in Settings,
+Privacy &amp; Security, Health.</p>
+
+<h2>What leaves your device</h2>
+<p>One thing does.</p>
 <ul>
-  <li><b>Subscription state</b>: Apple's StoreKit handles your purchase
-      and tells the App whether you have an active subscription. We do
-      not store your payment information.</li>
-  <li><b>Food-scan images (optional)</b>: if you use the camera-scan
-      feature and a third-party AI provider is configured, the image is
-      sent to that provider for recognition and discarded after the
-      response returns. The provider's own privacy policy applies during
-      that round-trip.</li>
-  <li><b>Anonymous product analytics (optional)</b>: if you have not
-      opted out in Settings, the App reports anonymous event counts
-      (screens viewed, features used) so we can fix the rough edges. No
-      food entries, weights, or personal identifiers are included.</li>
-  <li><b>Crash reports (optional)</b>: if you have not opted out, the
-      App sends crash stack traces to help us fix issues.</li>
+  <li><b>Food searches.</b> When you search for a food, the words you typed are
+      sent to Open Food Facts (<code>openfoodfacts.org</code>), an open food
+      database, which returns matching products. No account, no device
+      identifier, and none of your logs, weights, or health data go with the
+      request. Open Food Facts operates its own privacy policy for the traffic
+      it receives.</li>
+</ul>
+<p>That is the only network request the app makes.</p>
+
+<h2>Importing your history</h2>
+<p>If you import a CSV export from another tracker, the file is read on your
+device and the entries are written to your local database. The file is not
+transmitted anywhere.</p>
+
+<h2>What Squatch does not collect</h2>
+<ul>
+  <li>No usage analytics are transmitted. The app contains no analytics SDK.</li>
+  <li>No crash reports are transmitted. The app contains no crash-reporting
+      SDK.</li>
+  <li>No advertising, no advertising identifier, no tracking across apps or
+      websites, and no data is sold or shared with data brokers.</li>
+  <li>No account, no login, no email address, no name, no phone number, no
+      contacts.</li>
+  <li>No location.</li>
+  <li>No camera and no photo library. The app does not ask for either.</li>
+  <li>No third-party software development kits of any kind are bundled in the
+      app.</li>
 </ul>
 
-<h2>What is never collected</h2>
-<ul>
-  <li>Your name, email, phone, address, or contacts.</li>
-  <li>Your photo library beyond images you explicitly capture for food
-      scanning.</li>
-  <li>Your location.</li>
-  <li>Advertising identifiers.</li>
-</ul>
+<h2>Subscriptions</h2>
+<p>Purchases are handled by Apple through the App Store. Apple processes the
+payment and tells the app whether a subscription is active. We never see or
+store your payment details.</p>
 
-<h2>Data deletion</h2>
-<p>To delete every byte the App holds locally, tap Profile &rarr;
-Preferences &rarr; Delete All Data. The local SwiftData store, your
-iCloud-synced copy (if any), and the keychain entries are wiped.
-Apple Health entries you previously authorized stay in Apple Health
-itself; revoke access from Settings &rarr; Privacy &amp; Security &rarr;
-Health.</p>
+<h2>Deleting your data</h2>
+<p>Open <b>Camp</b> and tap <b>Erase everything</b>. That clears the local
+database and the app's stored settings on that device, and it cannot be
+undone. If iCloud sync is on, the deletion propagates to your other devices
+in the normal way.</p>
+<p>Entries Squatch previously wrote to Apple Health belong to Apple Health and
+stay there. Delete them in the Health app, or revoke the app's write access in
+Settings, Privacy &amp; Security, Health.</p>
 
 <h2>Children</h2>
-<p>CalTracker is not directed to children under 13.</p>
+<p>Squatch is not directed to children under 13.</p>
 
 <h2>Changes</h2>
-<p>If this policy materially changes we will update the "Last updated"
-date above and surface a notice in the App.</p>
+<p>If this policy changes in a way that matters, the date above changes and the
+app says so.</p>
 
 <h2>Contact</h2>
-<p>Questions: <a href="mailto:caltracker@moranetz.com">caltracker@moranetz.com</a>.</p>
+<p><a href="mailto:caltracker@moranetz.com">caltracker@moranetz.com</a></p>
 
-<footer>CalTracker is built by Marion Moranetz.</footer>
+<footer>Squatch is built by Marion Moranetz.</footer>
 </main></body></html>
