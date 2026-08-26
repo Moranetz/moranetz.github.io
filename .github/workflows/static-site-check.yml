@@ -21,6 +21,8 @@ jobs:
           test -f LICENSE
           test -f .gitignore
           test -f index.html
+          test -f favicon.svg
+          test -f 404.html
           python3 - <<'PY'
           from pathlib import Path
           pages = [Path("index.html"), Path("privacy-policy.html"), Path("persuasion-max.html")]
@@ -28,5 +30,9 @@ jobs:
               text = path.read_text()
               assert "<title>" in text, f"{path} is missing a title tag"
               assert "<meta name=\"viewport\"" in text, f"{path} is missing viewport metadata"
+          index = Path("index.html").read_text()
+          assert '<meta name="description"' in index, "index.html is missing a meta description"
+          assert 'rel="icon"' in index, "index.html is missing a favicon link"
+          assert '<meta property="og:title"' in index, "index.html is missing og:title"
           print("Portfolio pages passed baseline checks.")
           PY

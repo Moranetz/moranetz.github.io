@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marion Moranetz | Indie iOS Founder & Persuasion-Systems Builder</title>
+<meta name="description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<link rel="canonical" href="https://moranetz.github.io/">
+<meta property="og:title" content="Marion Moranetz">
+<meta property="og:description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moranetz.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marion Moranetz">
+<meta name="twitter:description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -65,8 +75,28 @@ header .tagline {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   font-size: clamp(0.85rem, 2vw, 1.05rem);
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
   font-style: italic;
+}
+
+/* skip link — visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 8px 14px;
+  background: #16161e;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
 }
 
 /* ── GRID ── */
@@ -116,6 +146,16 @@ header .tagline {
 @keyframes bottleIn {
   from { opacity: 0; transform: translateY(30px) scale(0.95); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottle-wrap {
+    animation: none;
+    opacity: 1;
+  }
+  .liquid::before, .bottle:hover .liquid::before {
+    animation: none !important;
+  }
 }
 
 /* ── bottle container ── */
@@ -390,6 +430,15 @@ header .tagline {
   border-color: rgba(255,255,255,0.3);
 }
 
+/* private formula — repo exists but is not public; no dead link */
+.preview-btn.private-tag {
+  color: rgba(255,255,255,0.55);
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.55);
+  cursor: default;
+}
+
 /* ── label ── */
 .label {
   width: 82%;
@@ -595,7 +644,7 @@ header .tagline {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
   line-height: 1.8;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.55);
   text-align: justify;
   columns: 2;
   column-gap: 40px;
@@ -749,7 +798,7 @@ header .tagline {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 8px;
 }
 .consult-heading {
@@ -805,7 +854,7 @@ footer {
 footer p {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.08em;
 }
 
@@ -857,7 +906,7 @@ footer p {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 24px;
 }
 .about p {
@@ -873,7 +922,7 @@ footer p {
 }
 .about .aside {
   font-style: italic;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
 }
 
 /* ── extra bottle animation delays ── */
@@ -883,6 +932,8 @@ footer p {
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header>
   <h1>moranetz</h1>
   <p class="subtitle">pharmacy &mdash; behavioral compounds</p>
@@ -891,6 +942,8 @@ footer p {
   <p class="header-intro">So this one is stocked like a pharmacy: every project below is a compound, labeled by what it does to the person using it.</p>
   <p class="header-stats">17 iOS apps shipped &middot; 39 public repos &middot; Bayesian-meta-analysis of 39 persuasion techniques &middot; Everything rendered from first principles.</p>
 </header>
+
+<main id="main">
 
 <div class="grid" id="grid">
   <!-- bottles injected by script -->
@@ -949,27 +1002,17 @@ footer p {
       <div class="shelf-label">Resume</div>
       <div class="shelf-sub">Clinical<br>history</div>
     </a>
-    <a class="shelf-item" href="https://linkedin.com/in/marionmoranetz" target="_blank" style="--item-glow:rgba(10,102,194,0.12)">
+    <a class="shelf-item" href="https://linkedin.com/in/marionmoranetz" target="_blank" rel="noopener noreferrer" style="--item-glow:rgba(10,102,194,0.12)">
       <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3.5" y="8" width="19" height="13" rx="2"/><path d="M9.5 8V6.2A1.7 1.7 0 0 1 11.2 4.5h3.6a1.7 1.7 0 0 1 1.7 1.7V8"/><path d="M3.5 13.5h19"/><path d="M11.5 13.5v2h3v-2"/></svg></div>
       <div class="shelf-label">LinkedIn</div>
       <div class="shelf-sub">Professional<br>referral</div>
     </a>
-    <a class="shelf-item" href="https://instagram.com/marionmoranetz" target="_blank" style="--item-glow:rgba(225,48,108,0.12)">
+    <a class="shelf-item" href="https://instagram.com/marionmoranetz" target="_blank" rel="noopener noreferrer" style="--item-glow:rgba(225,48,108,0.12)">
       <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="7" width="20" height="14" rx="2.5"/><path d="M9 7l1.4-2.5h5.2L17 7"/><circle cx="13" cy="14" r="4"/><circle cx="19.5" cy="10.5" r="0.4"/></svg></div>
       <div class="shelf-label">Instagram</div>
       <div class="shelf-sub">Visual<br>catalog</div>
     </a>
-    <a class="shelf-item" href="https://youtube.com/@marionmoranetz" target="_blank" style="--item-glow:rgba(255,0,0,0.1)">
-      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="5.5" width="20" height="15" rx="3"/><path d="M11 9.8v6.4l5.5-3.2z"/></svg></div>
-      <div class="shelf-label">YouTube</div>
-      <div class="shelf-sub">Lab<br>footage</div>
-    </a>
-    <a class="shelf-item" href="https://x.com/marionmoranetz" target="_blank" style="--item-glow:rgba(255,255,255,0.06)">
-      <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M5.5 5.5l15 15M20.5 5.5l-15 15"/></svg></div>
-      <div class="shelf-label">Twitter</div>
-      <div class="shelf-sub">Daily<br>bulletin</div>
-    </a>
-    <a class="shelf-item" href="https://github.com/moranetz" target="_blank" style="--item-glow:rgba(139,108,255,0.12)">
+    <a class="shelf-item" href="https://github.com/moranetz" target="_blank" rel="noopener noreferrer" style="--item-glow:rgba(139,108,255,0.12)">
       <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M10.5 4h5"/><path d="M12 4v6.2L6.2 19a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 10.2V4"/><path d="M8.6 16.5h8.8"/></svg></div>
       <div class="shelf-label">GitHub</div>
       <div class="shelf-sub">80 formulas<br>in stock</div>
@@ -980,18 +1023,24 @@ footer p {
     <div class="consult-rx">&#8478; Consultation Request</div>
     <div class="consult-heading">Bring the feature users still bounce off.</div>
     <div class="consult-sub">I build native iOS apps, behavioral systems, and product surfaces where the psychology is explicit instead of hand-waved. If adoption is stalling, trust is brittle, or the interaction loop feels technically correct but emotionally dead, that is the layer I diagnose and rebuild.</div>
-    <a class="consult-btn" href="https://www.linkedin.com/in/marionmoranetz" target="_blank">
+    <a class="consult-btn" href="https://www.linkedin.com/in/marionmoranetz" target="_blank" rel="noopener noreferrer">
       Book Appointment
     </a>
     <div class="consult-wait">No referral needed &middot; Average response time: &lt;1 day &middot; The first conversation is diagnostic.</div>
   </div>
 </div>
 
+</main>
+
 <footer>
   <p>caution: may cause compulsive building</p>
 </footer>
 
 <script>
+// Respect the OS-level reduced-motion setting: skip spring physics and
+// render canvases as a single static frame instead of a RAF loop.
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ═══ SOUND ENGINE ═══
 const Snd = {
   _ctx: null,
@@ -1230,7 +1279,7 @@ const projects = [
     rx: 'FRC-2024',
     dose: '4 scenes / zero asset pipeline',
     tags: ['SwiftUI', 'Canvas', 'Audio Synthesis'],
-    url: 'https://github.com/moranetz/stillness',
+    private: true, // repo exists but is private — no public link
     rotate: -1,
     hasCanvas: true,
     canvasId: 'cv2'
@@ -1243,7 +1292,7 @@ const projects = [
     rx: 'SLF-2025',
     dose: 'Overview / invoices / tax',
     tags: ['SwiftUI', 'iOS', 'Product Design'],
-    url: 'https://github.com/moranetz/SoloFinance',
+    private: true, // repo exists but is private — no public link
     rotate: 2.5,
     hasCanvas: true,
     canvasId: 'cv3'
@@ -1256,7 +1305,7 @@ const projects = [
     rx: 'CF-2024',
     dose: 'Real-time / Per article',
     tags: ['React', 'Chrome Extension'],
-    url: 'https://github.com/moranetz/ground-news', // Chrome extension — no web deploy
+    url: 'https://github.com/Moranetz/clearframe-public', // Chrome extension — public source
     rotate: -2.5,
     hasCanvas: true,
     canvasId: 'cv4'
@@ -1269,7 +1318,7 @@ const projects = [
     rx: 'PB-2024',
     dose: '50 tools / On demand',
     tags: ['Python', 'MCP', 'Claude'],
-    url: 'https://github.com/moranetz/post-bridge-mcp', // Python MCP — no web deploy
+    private: true, // Python MCP — repo is private, no public link
     rotate: 1,
     hasCanvas: true,
     canvasId: 'cv5'
@@ -1318,7 +1367,7 @@ const projects = [
     rx: 'PM-2024',
     dose: '12 scenarios',
     tags: ['AI', 'Claude'],
-    url: 'https://persuade-me-melindaxmarion-3009s-projects.vercel.app',
+    url: 'https://github.com/Moranetz/persuade-me',
     rotate: 1.8,
     hasCanvas: false
   },
@@ -1342,7 +1391,7 @@ const projects = [
     rx: 'SP-2026',
     dose: '56 tools / 24-7',
     tags: ['Python', 'Ollama', 'MCP'],
-    url: 'https://github.com/moranetz/social-pilot',
+    private: true, // repo exists but is private — no public link
     rotate: -1.8,
     hasCanvas: false
   }
@@ -1375,12 +1424,18 @@ function buildPreviewArea(project) {
     previewArea.appendChild(previewGlow);
   }
 
-  const previewLink = createElement('a', 'preview-btn', 'view on github →');
-  previewLink.href = project.url;
-  previewLink.target = '_blank';
-  previewLink.rel = 'noopener';
-  previewLink.addEventListener('click', (event) => event.stopPropagation());
-  previewArea.appendChild(previewLink);
+  if (project.private) {
+    // private formula — repo is not public, so no link to 404 on
+    const privateTag = createElement('span', 'preview-btn private-tag', 'private formula');
+    previewArea.appendChild(privateTag);
+  } else {
+    const previewLink = createElement('a', 'preview-btn', 'view on github →');
+    previewLink.href = project.url;
+    previewLink.target = '_blank';
+    previewLink.rel = 'noopener noreferrer';
+    previewLink.addEventListener('click', (event) => event.stopPropagation());
+    previewArea.appendChild(previewLink);
+  }
 
   return previewArea;
 }
@@ -1458,6 +1513,11 @@ projects.forEach((project, idx) => {
 
 // ═══ SPRING PHYSICS ENGINE ═══
 function springPop(cap, targetY, targetRot, onDone) {
+  if (REDUCED_MOTION) {
+    cap.style.transform = `translateY(${targetY}px) rotateX(${targetRot}deg)`;
+    if (onDone) onDone();
+    return () => {};
+  }
   // Spring parameters
   const mass = 1;
   const stiffness = 320;   // snappy
@@ -1532,6 +1592,11 @@ function springPop(cap, targetY, targetRot, onDone) {
 }
 
 function springClose(cap, onDone) {
+  if (REDUCED_MOTION) {
+    cap.style.transform = '';
+    if (onDone) onDone();
+    return () => {};
+  }
   const stiffness = 400;
   const damping = 22;
   const dt = 1 / 60;
@@ -1646,7 +1711,7 @@ function initCanvas(id) {
 requestAnimationFrame(() => {
 
 // 0: Read the Room — iMessage
-(() => { const r = initCanvas('cv0'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv0'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 const msgs = [{ t: "Hey, can I ask you something?", s: 'l' }, { t: "Sure, what's up?", s: 'r' }, { t: "Do people say what they mean?", s: 'l' }, { t: "Rarely. That's the game.", s: 'r' }, { t: "How do you read them?", s: 'l' }, { t: "You learn the patterns.", s: 'r' }];
 function draw() { x.fillStyle = '#0d0d1a'; x.fillRect(0, 0, W, H); const t = f * 0.016; const show = Math.min(Math.floor(t * 0.5), msgs.length);
 for (let i = 0; i < show; i++) { const m = msgs[i], y = 16 + i * 30, tw = Math.min(m.t.length * 6 + 20, W * 0.72), bx = m.s === 'r' ? W - tw - 14 : 14, age = Math.min((t - i * 2) * 1.5, 1), sc = Math.min(.85 + age * .3, 1);
@@ -1656,10 +1721,10 @@ if (m.s === 'r') { x.strokeStyle = 'rgba(119,85,255,0.2)'; x.lineWidth = .5; x.s
 x.fillStyle = m.s === 'r' ? 'rgba(255,255,255,.9)' : 'rgba(255,255,255,.65)'; x.font = '500 9px Outfit'; x.fillText(m.t, bx + 10, y + 14); x.restore() }
 if (show < msgs.length) { const ty = 16 + show * 30; x.globalAlpha = .5 + Math.sin(t * 4) * .3; x.fillStyle = '#1c1c2e'; x.beginPath(); x.roundRect(14, ty, 38, 22, 11); x.fill();
 for (let d = 0; d < 3; d++) { x.fillStyle = 'rgba(255,255,255,.3)'; x.beginPath(); x.arc(26 + d * 8, ty + 11, 2 + Math.sin(t * 5 + d) * .8, 0, Math.PI * 2); x.fill() } x.globalAlpha = 1 }
-f++; requestAnimationFrame(draw) } draw() })();
+if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 // 1: Signify — skill tree
-(() => { const r = initCanvas('cv1'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv1'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 const nodes = [{ x: .5, y: .12, d: 1 }, { x: .35, y: .28, d: 1 }, { x: .65, y: .44, d: 1 }, { x: .45, y: .6, d: 0, cur: 1 }, { x: .55, y: .76, d: 0 }, { x: .4, y: .92, d: 0 }];
 function draw() { x.fillStyle = '#0a0a18'; x.fillRect(0, 0, W, H); const t = f * .01;
 const g = x.createRadialGradient(W * .3, H * .2, 0, W * .3, H * .2, W * .4); g.addColorStop(0, 'rgba(119,85,255,.04)'); g.addColorStop(1, 'transparent'); x.fillStyle = g; x.fillRect(0, 0, W, H);
@@ -1672,10 +1737,10 @@ const cg = x.createLinearGradient(-R, -R, R, R); cg.addColorStop(0, '#d946ef'); 
 x.fillStyle = 'rgba(255,255,255,.15)'; x.beginPath(); x.arc(0, -3, R * .65, Math.PI, 0); x.fill();
 x.fillStyle = '#fff'; x.font = 'bold 9px Outfit'; x.fillText('H', 0, 3); x.restore() }
 else { x.fillStyle = '#2a2a3a'; x.beginPath(); x.arc(nx, ny, R, 0, Math.PI * 2); x.fill(); x.fillStyle = 'rgba(255,255,255,.12)'; x.font = '9px Outfit'; x.fillText('\uD83D\uDD12', nx, ny + 3) } });
-x.textAlign = 'start'; f++; requestAnimationFrame(draw) } draw() })();
+x.textAlign = 'start'; if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 // 2: Forecast — weather sky
-(() => { const r = initCanvas('cv2'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv2'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 function draw() { const t = f * .005; const h = 215 + Math.sin(t) * 12; const s = x.createLinearGradient(0, 0, 0, H);
 s.addColorStop(0, `hsl(${h},55%,8%)`); s.addColorStop(.5, `hsl(${h + 8},45%,14%)`); s.addColorStop(1, `hsl(${h + 20},35%,6%)`); x.fillStyle = s; x.fillRect(0, 0, W, H);
 for (let i = 0; i < 25; i++) { x.fillStyle = `rgba(255,255,255,${.12 + Math.sin(t * 3 + i * 2) * .1})`; x.fillRect((i * 97) % W, (i * 53) % (H * .5), 1.2, 1.2) }
@@ -1685,20 +1750,20 @@ for (let i = 0; i < 4; i++) { const cx = ((i * 150 + t * 20) % (W + 150)) - 75, 
 x.fillStyle = 'rgba(14,14,26,.45)'; x.beginPath(); x.roundRect(W / 2 - 70, H - 65, 140, 50, 12); x.fill();
 x.fillStyle = 'rgba(96,165,250,.8)'; x.font = 'bold 22px Outfit'; x.textAlign = 'center'; x.fillText('72\u00B0', W / 2, H - 32);
 x.fillStyle = 'rgba(255,255,255,.35)'; x.font = '500 8px Outfit'; x.fillText('Partly Clear', W / 2, H - 20); x.textAlign = 'start';
-f++; requestAnimationFrame(draw) } draw() })();
+if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 // 3: Wild Hearts — farm
-(() => { const r = initCanvas('cv3'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv3'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 const ani = Array.from({ length: 5 }, (_, i) => ({ x: 60 + i * 70, y: H * .6 + Math.random() * 40, vx: (Math.random() - .5) * .5, sz: 7 + Math.random() * 4, hue: [120, 35, 210, 50, 340][i] }));
 function draw() { const t = f * .007; const sk = x.createLinearGradient(0, 0, 0, H * .5); sk.addColorStop(0, '#0a1520'); sk.addColorStop(1, '#0a2810'); x.fillStyle = sk; x.fillRect(0, 0, W, H);
 const gr = x.createLinearGradient(0, H * .45, 0, H); gr.addColorStop(0, '#0e3018'); gr.addColorStop(1, '#081a0c'); x.fillStyle = gr; x.fillRect(0, H * .45, W, H * .55);
 for (let i = 0; i < 6; i++) { const tx = 30 + i * 65, ty = H * .42; x.fillStyle = '#3d2b1a'; x.fillRect(tx - 2, ty, 4, 22); const cg = x.createRadialGradient(tx, ty - 4, 0, tx, ty - 4, 18); cg.addColorStop(0, 'rgba(34,120,50,.5)'); cg.addColorStop(1, 'rgba(20,80,30,.15)'); x.fillStyle = cg; x.beginPath(); x.arc(tx, ty - 4, 16 + Math.sin(t + i) * 2, 0, Math.PI * 2); x.fill() }
 for (let i = 0; i < 50; i++) { const gx = (i * 11) % W, gy = H * .48 + (i * 9) % (H * .38), sw = Math.sin(t * 2 + i * .3) * 2.5; x.strokeStyle = `rgba(74,222,128,${.1 + Math.random() * .05})`; x.lineWidth = .7; x.beginPath(); x.moveTo(gx, gy); x.quadraticCurveTo(gx + sw, gy - 10, gx + sw * 1.3, gy - 18); x.stroke() }
 ani.forEach(a => { a.x += a.vx; if (a.x < 20 || a.x > W - 20) a.vx *= -1; const b = Math.sin(t * 3 + a.x * .01) * 2; x.fillStyle = `hsl(${a.hue},55%,50%)`; x.beginPath(); x.ellipse(a.x, a.y + b, a.sz, a.sz * .65, 0, 0, Math.PI * 2); x.fill(); x.fillStyle = '#fff'; x.beginPath(); x.arc(a.x - 1.5, a.y + b - 1.5, 1, 0, Math.PI * 2); x.arc(a.x + 1.5, a.y + b - 1.5, 1, 0, Math.PI * 2); x.fill() });
-f++; requestAnimationFrame(draw) } draw() })();
+if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 // 4: ClearFrame — bias split
-(() => { const r = initCanvas('cv4'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv4'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 function draw() { const t = f * .009; x.fillStyle = '#0a0e18'; x.fillRect(0, 0, W / 2, H); x.fillStyle = '#180a0e'; x.fillRect(W / 2, 0, W / 2, H);
 x.strokeStyle = 'rgba(34,211,238,.2)'; x.lineWidth = .8; x.setLineDash([4, 4]); x.beginPath(); x.moveTo(W / 2, 0); x.lineTo(W / 2, H); x.stroke(); x.setLineDash([]);
 for (let i = 0; i < 8; i++) { const y = 20 + i * 22 + Math.sin(t + i) * 2, lw = 50 + (i * 37) % 80, a = .06 + Math.sin(t * 1.5 + i * .7) * .03;
@@ -1708,10 +1773,10 @@ const sy = (t * 30) % H; x.fillStyle = 'rgba(34,211,238,.03)'; x.fillRect(0, sy 
 x.fillStyle = 'rgba(14,14,26,.5)'; x.beginPath(); x.roundRect(W / 2 - 50, H - 38, 100, 24, 8); x.fill();
 const bias = Math.sin(t * .5) * .3; x.fillStyle = 'rgba(34,211,238,.2)'; x.beginPath(); x.roundRect(W / 2 - 38, H - 32, 76, 12, 4); x.fill();
 x.fillStyle = '#22d3ee'; x.beginPath(); x.arc(W / 2 + bias * 38, H - 26, 4, 0, Math.PI * 2); x.fill();
-f++; requestAnimationFrame(draw) } draw() })();
+if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 // 5: PostBridge — network
-(() => { const r = initCanvas('cv5'); if (!r) return; const { x, W, H } = r; let f = 0;
+(() => { const r = initCanvas('cv5'); if (!r) return; const { x, W, H } = r; let f = REDUCED_MOTION ? 900 : 0;
 const nodes = Array.from({ length: 10 }, () => ({ x: 40 + Math.random() * (W - 80), y: 30 + Math.random() * (H - 60), vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: 3 + Math.random() * 3 }));
 function draw() { const t = f * .007; x.fillStyle = '#06060e'; x.fillRect(0, 0, W, H);
 nodes.forEach(n => { n.x += n.vx; n.y += n.vy; if (n.x < 20 || n.x > W - 20) n.vx *= -1; if (n.y < 20 || n.y > H - 20) n.vy *= -1 });
@@ -1721,7 +1786,7 @@ if (Math.sin(t * 3 + i + j) > .65) { const p = Math.sin(t * 2 + i) * .5 + .5; x.
 nodes.forEach(n => { x.fillStyle = 'rgba(251,113,133,.45)'; x.beginPath(); x.arc(n.x, n.y, n.r, 0, Math.PI * 2); x.fill() });
 x.fillStyle = 'rgba(251,113,133,.06)'; x.beginPath(); x.arc(W / 2, H / 2, 30, 0, Math.PI * 2); x.fill();
 x.fillStyle = 'rgba(255,255,255,.3)'; x.font = 'bold 7px JetBrains Mono'; x.textAlign = 'center'; x.fillText('MCP', W / 2, H / 2 + 3); x.textAlign = 'start';
-f++; requestAnimationFrame(draw) } draw() })();
+if (!REDUCED_MOTION) { f++; requestAnimationFrame(draw); } } draw() })();
 
 }); // end requestAnimationFrame for layout
 </script>
