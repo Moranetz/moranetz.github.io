@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <title>Whose Round — Privacy Policy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="robots" content="index,follow"><style>
 :root { --fg:#1a1a1a; --muted:#555; --bg:#fff; --accent:#0066cc; --rule:#e5e5e5; }
 @media (prefers-color-scheme: dark){ :root{ --fg:#e8e8e8; --muted:#a0a0a0; --bg:#111; --accent:#66aaff; --rule:#2a2a2a; } }
@@ -15,18 +16,21 @@ a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; borde
 .contact{ font-size:1.1rem; padding:1rem 1.25rem; background:var(--rule); border-radius:8px; color:var(--fg); }
 </style></head><body>
 <h1>Whose Round — Privacy Policy</h1>
-<p class="effective">Effective: 2026-05-16 · Developer: Marion Moranetz</p>
-<em class="summary"><strong>Whose Round</strong> is local-first. What you create or track stays on your device. It does not collect your personal information, sell your data, share it with advertisers, or transmit it to any server I control. Where data leaves your device it is only to deliver a feature you explicitly invoked (iCloud sync, a share sheet, Apple Health). No identifying analytics.</em>
+<p class="effective">Effective: 2026-08-26 · Developer: Marion Moranetz</p>
+<em class="summary"><strong>Whose Round</strong> keeps your groups, rounds, and history on your device and makes no network calls of its own. The one time data goes anywhere is when you tap settle: the payment handle, amount, and note you chose are placed in a link that opens Venmo, Cash App, or PayPal. No account, no server, no analytics SDK, no advertising SDK.</em>
 <h2>What is collected</h2>
-<h3>Nothing that identifies you, by default.</h3>
-<p>Whose Round stores its data locally using iOS's standard <code>UserDefaults</code>, on-device files, or (where the app integrates with it) Apple HealthKit. This data:</p>
+<h3>Stored on your device, sent nowhere.</h3>
+<p>Whose Round stores your friends, groups, rounds, and settle history locally on your device. This data:</p>
 <ul>
-<li>Stays on your device unless you explicitly share it (export, share sheet, iCloud)</li>
-<li>Is not transmitted to me, my servers, or any third party</li>
+<li>Is not transmitted to me or any server &mdash; the app has none</li>
 <li>Is encrypted by iOS using your device passcode and the iOS Data Protection class</li>
 </ul>
-<h3>Possible exceptions</h3>
-<p>If the app offers iCloud sync, data syncs to <strong>your</strong> iCloud account via Apple CloudKit — I cannot see it. If it integrates with Apple Health, Calendar, Photos, or Files via the standard system pickers, each access is authorized by you at the moment you take that action. If it offers Sign in with Apple, only your Apple ID identifier is used — never your name or email unless you choose to share them, and nothing is stored on a server.</p>
+<h3>Adding friends from Contacts</h3>
+<p>If you add a friend from Contacts, the app uses Apple&rsquo;s out-of-process contact picker: it never gets access to your address book, only to the one contact you pick, and it keeps just that contact&rsquo;s name and photo, locally.</p>
+<h2>The one place data goes: settling up</h2>
+<p>When you tap settle, the app builds a link containing the recipient&rsquo;s payment handle, the amount, and (for Venmo) the note, and hands it to the payment app you chose &mdash; Venmo, Cash App, or PayPal. From that moment, that company&rsquo;s privacy policy governs what happens; nothing comes back to Whose Round. If you never tap settle, no data goes anywhere at all.</p>
+<h2>What the app never touches</h2>
+<p>No network requests of its own. No account or sign-in. No iCloud sync. No Apple Health. No location, camera, or microphone. No push notifications.</p>
 <h2>Third-party services</h2>
 <p>Whose Round does <strong>not</strong> use third-party analytics (Mixpanel, Amplitude, Segment), advertising SDKs (AdMob, Facebook Audience Network, Unity Ads), off-device crash reporters (Sentry, Crashlytics, Bugsnag), or tracking SDKs. If this ever changes, this policy and the app's release notes will say so.</p>
 <h2>Children's privacy (COPPA)</h2>
