@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Chudmax — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"><style>
+:root { --fg:#1a1a1a; --muted:#555; --bg:#fff; --accent:#0066cc; --rule:#e5e5e5; }
+@media (prefers-color-scheme: dark){ :root{ --fg:#e8e8e8; --muted:#a0a0a0; --bg:#111; --accent:#66aaff; --rule:#2a2a2a; } }
+body{ font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; color:var(--fg); background:var(--bg); max-width:720px; margin:3rem auto; padding:0 1.5rem 4rem; }
+h1,h2,h3{ line-height:1.2; } h1{ font-size:2rem; margin-bottom:.25rem; }
+h2{ font-size:1.3rem; margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--rule); }
+h3{ font-size:1.05rem; margin-top:1.5rem; } p,ul,ol{ margin:.8rem 0; }
+strong{ color:var(--fg); font-weight:600; }
+em.summary{ display:block; font-style:italic; color:var(--muted); padding:1rem; background:var(--rule); border-radius:8px; }
+a{ color:var(--accent); } code{ background:var(--rule); padding:.1em .3em; border-radius:3px; font-size:.9em; }
+.effective,.contact{ color:var(--muted); font-size:.95rem; }
+.contact{ font-size:1.1rem; padding:1rem 1.25rem; background:var(--rule); border-radius:8px; color:var(--fg); }
+</style></head><body>
+<h1>Chudmax — Privacy Policy</h1>
+<p class="effective">Effective: 2026-08-27 · Developer: Marion Moranetz</p>
+<em class="summary"><strong>Chudmax</strong> covers faces in your photos and videos entirely on your device. There is no account, no server of mine, and no analytics. Your photos and videos never leave your phone, and the copies the app saves are re-drawn from scratch so the original's location and camera metadata never come along.</em>
+<h2>What the app stores, and where</h2>
+<ul>
+<li><strong>Stickers you import</strong> (PNG images you choose) live in the app's private container on your device.</li>
+<li><strong>Thumbnails of your covered exports</strong> (the "fresh prints" strip) live in the same private container.</li>
+<li><strong>Small preferences</strong> — your last-used cover style, whether the Chudmax tag is on, and whether the free video clip is used — in standard <code>UserDefaults</code>.</li>
+</ul>
+<p>Deleting the app deletes all of it.</p>
+<h2>How your photos and videos are handled</h2>
+<ul>
+<li><strong>Face spotting runs on-device</strong> using Apple's Vision framework. No image or video is ever uploaded anywhere.</li>
+<li><strong>The photo picker is out-of-process</strong>: the app only receives the specific items you pick. It never browses your library. Saving a finished print asks for add-only Photos access.</li>
+<li><strong>Paste</strong> reads an image from the clipboard only at the moment you tap the system Paste button, never in the background.</li>
+<li><strong>Exports are metadata-clean.</strong> The saved copy is rendered from raw pixels, so GPS location, camera model, and other EXIF metadata from the original are not carried into it. The original in your library is untouched.</li>
+</ul>
+<h2>The purchase</h2>
+<p>Chudmax Pro is a one-time purchase handled entirely by Apple's StoreKit. I never see your payment details. The only network traffic the app generates is Apple's own purchase and receipt handling.</p>
+<h2>What the app never touches</h2>
+<ul>
+<li><strong>No analytics SDKs, no advertising SDKs, no trackers, no device identifiers.</strong></li>
+<li><strong>No account and no sign-in.</strong></li>
+<li><strong>Sharing is yours:</strong> the share sheet and the Instagram Stories button hand the finished, covered file to the app you choose — nothing is posted by Chudmax itself.</li>
+</ul>
+<h2>A note on covering faces</h2>
+<p>The app double-checks every export with the same on-device face spotter and warns you when a face is still findable, but no detector is perfect. Give every print one last look before you post — especially when it's someone else's face you promised to cover.</p>
+<h2>Children's privacy (COPPA)</h2>
+<p>Chudmax is not directed at children under 13 and does not knowingly collect data from anyone.</p>
+<h2>Your rights</h2>
+<p>Because no personal data is collected on any server I control, there is no controller-side data to access, port, or erase. Local data is governed by Apple's iOS protections and your control of your device — delete the app and it is gone.</p>
+<h2>Changes</h2>
+<p>Updates get a new "Effective" date here and a note in the next App Store release notes.</p>
+<h2>Contact</h2>
+<p>Privacy questions or concerns: <a href="mailto:Marion.m.moranetz@gmail.com"><strong>Marion.m.moranetz@gmail.com</strong></a></p>
+</body></html>
