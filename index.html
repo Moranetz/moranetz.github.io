@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marion Moranetz | Indie iOS Founder & Persuasion-Systems Builder</title>
-<meta name="description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<title>Marion Moranetz | iOS Founder & Human-Systems Engineer</title>
+<meta name="description" content="17 native iOS apps, 5 live on the App Store, and a research corpus on how attention and motivation actually behave. Every project labeled by what it does for the person using it.">
 <link rel="canonical" href="https://moranetz.github.io/">
 <meta property="og:title" content="Marion Moranetz">
-<meta property="og:description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<meta property="og:description" content="17 native iOS apps, 5 live on the App Store, and a research corpus on how attention and motivation actually behave. Every project labeled by what it does for the person using it.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://moranetz.github.io/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Marion Moranetz">
-<meta name="twitter:description" content="I build tools that make invisible systems visible. Every project below is a compound, labeled by what it does to the person using it.">
+<meta name="twitter:description" content="17 native iOS apps, 5 live on the App Store, and a research corpus on how attention and motivation actually behave. Every project labeled by what it does for the person using it.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -900,6 +900,90 @@ footer p {
   position: relative;
   z-index: 1;
 }
+
+/* ── OVER THE COUNTER — live App Store apps ── */
+.otc {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 24px 40px;
+  position: relative;
+  z-index: 1;
+}
+.otc-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.otc-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+  margin-bottom: 24px;
+}
+.otc-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.otc-item {
+  --glow: #8b6cff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  padding: 18px 18px 16px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #16161e 0%, #111118 100%);
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.25s, border-color 0.3s;
+}
+.otc-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.3), 0 10px 24px rgba(0,0,0,0.45), 0 0 24px color-mix(in srgb, var(--glow) 18%, transparent);
+}
+.otc-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+.otc-name::before {
+  content: '●';
+  color: var(--glow);
+  margin-right: 8px;
+  font-size: 0.6rem;
+  vertical-align: 1px;
+}
+.otc-desc {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.55);
+  flex: 1;
+}
+.otc-store {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  transition: color 0.25s;
+}
+.otc-item:hover .otc-store {
+  color: var(--glow);
+}
 .about h2 {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;
@@ -938,9 +1022,8 @@ footer p {
   <h1>moranetz</h1>
   <p class="subtitle">pharmacy &mdash; behavioral compounds</p>
   <p class="tagline">I build tools that make invisible systems visible.</p>
-  <p class="header-intro">You&rsquo;ve seen a lot of portfolios this week, and somewhere around the twentieth you stopped reading the descriptions and started scanning for one that didn&rsquo;t look like the other nineteen.</p>
-  <p class="header-intro">So this one is stocked like a pharmacy: every project below is a compound, labeled by what it does to the person using it.</p>
-  <p class="header-stats">17 iOS apps shipped &middot; 39 public repos &middot; Bayesian-meta-analysis of 39 persuasion techniques &middot; Everything rendered from first principles.</p>
+  <p class="header-intro">This site is stocked like a pharmacy: every project below is a compound, labeled by what it does for the person using it.</p>
+  <p class="header-stats">17 iOS apps shipped &middot; 5 live on the App Store &middot; 52 public repos &middot; Everything rendered from first principles.</p>
 </header>
 
 <main id="main">
@@ -949,28 +1032,57 @@ footer p {
   <!-- bottles injected by script -->
 </div>
 
+<!-- OVER THE COUNTER — live on the App Store -->
+<div class="otc">
+  <div class="otc-title">▸ Over the Counter</div>
+  <div class="otc-sub">No prescription needed. Live on the App Store.</div>
+  <div class="otc-shelf">
+    <a class="otc-item" href="https://apps.apple.com/us/app/forecast-cycle-syncing/id6760952160" target="_blank" rel="noopener noreferrer" style="--glow:#60a5fa">
+      <div class="otc-name">Forecast</div>
+      <div class="otc-desc">A period tracker built inside a real weather app. Someone glances at your phone and sees a storm front rolling in.</div>
+      <div class="otc-store">App Store ↗</div>
+    </a>
+    <a class="otc-item" href="https://apps.apple.com/us/app/reckon-decision-log/id6765753420" target="_blank" rel="noopener noreferrer" style="--glow:#22d3ee">
+      <div class="otc-name">Reckon</div>
+      <div class="otc-desc">Heuer&rsquo;s competing-hypotheses method as a native decision log. Hypotheses ranked by what hasn&rsquo;t been knocked down.</div>
+      <div class="otc-store">App Store ↗</div>
+    </a>
+    <a class="otc-item" href="https://apps.apple.com/us/app/frame-fork/id6769203470" target="_blank" rel="noopener noreferrer" style="--glow:#4ade80">
+      <div class="otc-name">Frame &amp; Fork</div>
+      <div class="otc-desc">Sparring for hard conversations, on the rails chess.com built for chess. 100 hand-authored positions, 30 seconds a move.</div>
+      <div class="otc-store">App Store ↗</div>
+    </a>
+    <a class="otc-item" href="https://apps.apple.com/us/app/wildhearts/id6761954510" target="_blank" rel="noopener noreferrer" style="--glow:#ec4899">
+      <div class="otc-name">WildHearts</div>
+      <div class="otc-desc">A cozy creature-collecting farm. Tame and breed rare variants; build toward the Stone Manor.</div>
+      <div class="otc-store">App Store ↗</div>
+    </a>
+    <a class="otc-item" href="https://apps.apple.com/us/app/palm-beach-jeff/id6762151408" target="_blank" rel="noopener noreferrer" style="--glow:#fbbf24">
+      <div class="otc-name">Palm Beach Jeff</div>
+      <div class="otc-desc">A small, quiet game for one player. Over real-world days, a shelter takes shape.</div>
+      <div class="otc-store">App Store ↗</div>
+    </a>
+  </div>
+</div>
+
 <div class="about">
   <h2>What I actually do</h2>
 
-  <p>Most developers ship features. I ship behavioral systems inside native products.</p>
+  <p>Every product here started from the same operating question: what invisible human pattern is deciding whether this software gets trusted or deleted?</p>
 
-  <p>The stack changes. The operating question doesn&rsquo;t: what invisible human pattern is deciding whether this product gets trusted, ignored, repeated, or abandoned?</p>
+  <p>I build that layer directly into native iOS apps. The recurring subjects are cognitive workload, trust calibration, whether practice transfers.</p>
 
-  <p>I build that layer directly into the software. Native iOS apps. Procedural visual systems. Product loops that make emotional state, decision pressure, motivation drift, or interpersonal subtext measurable enough to design against.</p>
+  <p>Read the Room looks like an iMessage inbox. Underneath, every character runs on a psychological profile and every response is scored against it. The scenarios test whether you can read the person in front of you under pressure.</p>
 
-  <p>Read the Room looks like your iMessage inbox, but the point is not the pixels. The point is that every character has a psychological profile, every response is scored, and every scenario teaches whether you can actually read a person instead of replaying canned tactics.</p>
+  <p><span class="highlight">When the final character turned out to be immune to every influence technique except authenticity, I kept it.</span> The system produced that result on its own.</p>
 
-  <p><span class="highlight">When the final character turned out to be immune to every influence technique except authenticity, I kept it.</span> Not because it sounded poetic. Because the system produced that result on its own.</p>
+  <p>Reckon and WeighIt take Heuer&rsquo;s analysis of competing hypotheses, the method CIA analysts train on, and turn it into a touchable decision log: hypotheses ranked by what has survived refutation. Stillness regulates arousal with fully procedural scenes and synthesized audio; there is no asset pipeline to hide behind. SoloFinance reduces freelance money anxiety to three numbers on one screen.</p>
 
-  <p>Stillness takes the opposite problem: how do you build calm without stock assets, fake atmosphere, or generic wellness sludge? The answer there was procedural Canvas scenes, synthesized audio, and a product surface that feels soft even though the implementation underneath is mechanical and exacting.</p>
+  <p>The research side holds the apps to a standard. A pre-registered Bayesian meta-analysis of 39 named influence techniques found 15 of them have zero peer-reviewed support. A 245-record corpus tracks how attention is captured and held, compiled for retention work and kept current.</p>
 
-  <p>WeighIt takes a dense intelligence-analysis method and turns it into a touchable iOS workflow. SoloFinance reduces freelance money anxiety to three numbers that fit on one screen. Different products. Same move: take something mentally noisy and engineer it into a clean operating surface.</p>
+  <p>So when a team says, &ldquo;the feature works, but users still don&rsquo;t adopt it,&rdquo; I usually find the same underlying failure: the model of the user is too shallow. The interface assumes rational behavior where the real driver is anxiety or ambiguity or social risk.</p>
 
-  <p><span class="aside">That is the throughline.</span> I&rsquo;m not interested in shipping more screens. I&rsquo;m interested in building products where the psychology is part of the architecture.</p>
-
-  <p>So when a team says, &ldquo;the feature works, but users still don&rsquo;t adopt it,&rdquo; I usually find the same underlying failure: the model of the user is too shallow. The interface assumes rational behavior where the real driver is anxiety, ambiguity, status, privacy, avoidance, reward anticipation, or social risk.</p>
-
-  <p><span class="highlight">That is the work I do best: native product engineering with a behavioral spine strong enough to change outcomes, not just visuals.</span></p>
+  <p><span class="aside">Off the keyboard,</span> I host a recurring working session for people building in neurotech and aerospace: EEG, neural decoding, behavioral reward, human performance. Small room, recurring members, referral-only.</p>
 </div>
 
 <div class="side-effects">
@@ -979,7 +1091,7 @@ footer p {
     <div class="se-body">Compulsive pattern recognition. Difficulty using apps without reverse-engineering their engagement model. Persistent urge to build behavioral systems for problems most people solve with intuition.</div>
 
     <div class="se-heading">Active Ingredients</div>
-    <div class="se-body">Swift &middot; SwiftUI &middot; React &middot; TypeScript &middot; Python &middot; Core Graphics &middot; Core Haptics &middot; Claude API &middot; OpenClaw &middot; FastAPI &middot; Web Audio &middot; Canvas &middot; behavioral science that works better when you don&rsquo;t notice it</div>
+    <div class="se-body">Swift &middot; SwiftUI &middot; React &middot; TypeScript &middot; Python &middot; Core Graphics &middot; Core Haptics &middot; Claude API &middot; OpenClaw &middot; FastAPI &middot; Web Audio &middot; Canvas &middot; behavioral science with the receipts attached</div>
 
     <div class="se-heading">Contraindications</div>
     <div class="se-body">Do not combine with shallow product thinking or the assumption that users are rational actors.</div>
@@ -988,7 +1100,7 @@ footer p {
     <div class="se-body">Dark mode only. Between 0 and &infin; commits. Keep away from anyone who thinks engagement is a vanity metric.</div>
 
     <div class="se-heading">Manufacturer</div>
-    <div class="se-body">moranetz laboratories &mdash; 80 formulas. All synthesized from first principles. No templates were harmed.</div>
+    <div class="se-body">moranetz laboratories &mdash; 52 public formulas. All synthesized from first principles. No templates were harmed.</div>
   </div>
 </div>
 
@@ -1015,14 +1127,14 @@ footer p {
     <a class="shelf-item" href="https://github.com/moranetz" target="_blank" rel="noopener noreferrer" style="--item-glow:rgba(139,108,255,0.12)">
       <div class="shelf-icon"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M10.5 4h5"/><path d="M12 4v6.2L6.2 19a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3L14 10.2V4"/><path d="M8.6 16.5h8.8"/></svg></div>
       <div class="shelf-label">GitHub</div>
-      <div class="shelf-sub">80 formulas<br>in stock</div>
+      <div class="shelf-sub">52 formulas<br>in stock</div>
     </a>
   </div>
 
   <div class="consult">
     <div class="consult-rx">&#8478; Consultation Request</div>
     <div class="consult-heading">Bring the feature users still bounce off.</div>
-    <div class="consult-sub">I build native iOS apps, behavioral systems, and product surfaces where the psychology is explicit instead of hand-waved. If adoption is stalling, trust is brittle, or the interaction loop feels technically correct but emotionally dead, that is the layer I diagnose and rebuild.</div>
+    <div class="consult-sub">I build native iOS apps and the measurement layer underneath them, where the psychology is explicit instead of hand-waved. If the interaction is technically correct and still isn&rsquo;t trusted or repeated, that is the layer I diagnose and rebuild.</div>
     <a class="consult-btn" href="https://www.linkedin.com/in/marionmoranetz" target="_blank" rel="noopener noreferrer">
       Book Appointment
     </a>
@@ -1210,22 +1322,10 @@ const Snd = {
 // ═══ PROJECT DATA ═══
 const projects = [
   {
-    chem: 'caffeine',
-    chemName: 'CAFFEINE',
-    project: 'outreach-lab',
-    desc: 'Technique-tagged cold-outreach generator. Cites posteriors from the Closing Evidence Atlas. Five email variants per target, each backed by a real effect size.',
-    rx: 'OL-V02',
-    dose: '6 techniques / per-company tailoring',
-    tags: ['Python', 'Click', 'Claude API'],
-    url: 'https://github.com/Moranetz/outreach-lab',
-    rotate: -1.2,
-    hasCanvas: false
-  },
-  {
     chem: 'serotonin',
     chemName: 'SEROTONIN',
     project: 'Closing Evidence Atlas',
-    desc: 'Pre-registered Bayesian random-effects meta-analysis of 39 named persuasion techniques. 44 records extracted, 6 per-technique posteriors. 15 named closing techniques have zero peer-reviewed studies.',
+    desc: 'Pre-registered Bayesian random-effects meta-analysis of 39 named influence techniques. 11,785 records screened, 6 posteriors survive. 15 of the industry’s favorite techniques have zero peer-reviewed studies behind them.',
     rx: 'CEA-V05',
     dose: '11,785 records screened / 6 posteriors',
     tags: ['Python', 'Bayesian', 'PRISMA 2020'],
@@ -1234,10 +1334,10 @@ const projects = [
     hasCanvas: false
   },
   {
-    chem: 'psilocybin',
-    chemName: 'PSILOCYBIN',
+    chem: 'glutamate',
+    chemName: 'GLUTAMATE',
     project: 'Persuasion-Max',
-    desc: '5-layer mechanistic prediction engine. 126K interactions. 329 tests. 302 parameters. Predicts WHY a message works.',
+    desc: '5-layer mechanistic model of why a message moves someone. 126K interactions. 329 tests. 302 parameters. Influence made measurable enough to audit.',
     rx: 'PM-2026',
     dose: '17 endpoints / 12 MCP tools',
     tags: ['Python', 'FastAPI', 'scikit-learn'],
@@ -1348,8 +1448,8 @@ const projects = [
     hasCanvas: false
   },
   {
-    chem: 'dmt',
-    chemName: 'DMT',
+    chem: 'oxytocin',
+    chemName: 'OXYTOCIN',
     project: 'Egregore',
     desc: 'Boundary dissolver. Collective consciousness through atmospheric gameplay.',
     rx: 'EGR-2024',
@@ -1363,7 +1463,7 @@ const projects = [
     chem: 'testosterone',
     chemName: 'TESTOSTERONE',
     project: 'Persuade Me',
-    desc: 'Assertiveness compound. Practice influence on characters who fight back.',
+    desc: 'Resistance trainer. Twelve scored scenarios against characters who push back and remember what you said.',
     rx: 'PM-2024',
     dose: '12 scenarios',
     tags: ['AI', 'Claude'],
@@ -1383,18 +1483,6 @@ const projects = [
     rotate: -1.2,
     hasCanvas: false
   },
-  {
-    chem: 'norepinephrine',
-    chemName: 'CORTISOL',
-    project: 'Social Pilot',
-    desc: 'Autonomous behavioral agent. 56 tools, fine-tuned 7B LLM, 85 tests. Generates, scores, and posts content while modeling human psychology.',
-    rx: 'SP-2026',
-    dose: '56 tools / 24-7',
-    tags: ['Python', 'Ollama', 'MCP'],
-    private: true, // repo exists but is private — no public link
-    rotate: -1.8,
-    hasCanvas: false
-  }
 ];
 
 // ═══ BUILD BOTTLES ═══
