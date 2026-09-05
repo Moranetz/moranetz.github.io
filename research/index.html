@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Measurement Layer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="paper.css">
+<style>
+  .papers{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:34px}
+  .paper{background:var(--bg2);padding:26px 26px 24px;display:block;text-decoration:none;color:inherit;transition:background .2s}
+  .paper:hover{background:var(--panel)}
+  .paper .num{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+  .paper h2{font-size:23px;margin:9px 0 8px}
+  .paper p{font-size:14.5px;color:var(--sub);margin:0;max-width:64ch}
+  .paper .finding{
+    margin-top:14px;font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--ink);
+    background:var(--cyan-field);border-left:2px solid var(--cyan-soft);padding:9px 13px;border-radius:0 3px 3px 0;
+  }
+  .paper .meta{margin-top:13px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .pending{background:var(--bg2);padding:22px 26px}
+  .pending h3{font-family:Fraunces,serif;font-size:16px;margin:0 0 4px}
+  .pending p{font-size:13.5px;color:var(--faint);margin:0}
+</style>
+<div class="wrap">
+<header>
+  <div class="eyebrow">moranetz &middot; research</div>
+  <h1>The Measurement Layer</h1>
+  <p class="deck">Neurotech has hardware builders and it has theorists. Almost nobody turns a felt, subjective phenomenon into a number somebody else can check. These are instruments, and each paper is the instrument pointed at something the field currently asserts without measuring.</p>
+  <p class="byline"><b>Marion Moranetz</b> &middot; San Francisco &middot; <a href="https://moranetz.github.io/">moranetz.github.io</a></p>
+  <div class="gate">
+    <div class="lbl">Standing rule</div>
+    <p>Every citation is graded, and the grade is on the page. VERIFIED means a primary source was opened and says what it is cited for. CONTESTED means the finding is real and disputed, and the dispute is named. Claims that could not be verified are printed as unverified rather than dropped, and the folklore each field repeats is quarantined by name.</p>
+  </div>
+</header>
+
+<div class="papers">
+
+  <a class="paper" href="melanopic/">
+    <div class="num">Paper 01</div>
+    <h2>Filters Don&rsquo;t Work. Palettes Do.</h2>
+    <p>Night modes are a marketing claim, not a measurement. This paper builds a per-pixel melanopic-dose instrument and points it at the interfaces people trust before bed.</p>
+    <div class="finding">Kindle&rsquo;s sepia mode doses at 76% of white, because it is bright. Warm is a decoy and luminance is what matters. A red filter strong enough to cut dose 21x collapses body text to APCA Lc 9.7, so there is nothing usable in between.</div>
+    <div class="meta">Instrument &middot; melanopic.py, screen_dose.py</div>
+  </a>
+
+  <a class="paper" href="neuroaesthetics/">
+    <div class="num">Paper 02</div>
+    <h2>Measured Neuroaesthetics</h2>
+    <p>&ldquo;This interface feels premium&rdquo; is treated as ineffable taste. It decomposes into eight mechanisms, each tied to a property you can already instrument, and a short list of folklore to exclude.</p>
+    <div class="finding">The one mechanism that is not a static pixel property, the split between liking and wanting, is exactly what separates good design from a dark pattern. Aesthetic quality and manipulation are read on the same axis, in opposite directions.</div>
+    <div class="meta">Paper v1.0 &middot; citation gate cleared 2026-09-04</div>
+  </a>
+
+  <a class="paper" href="neural-interface-ux/">
+    <div class="num">Paper 03</div>
+    <h2>The Unmeasured Half of the Neural Interface</h2>
+    <p>Two decades of brain-computer interface research optimized the decoder, measured almost entirely by Information Transfer Rate. ITR has no term for user effort, fatigue, dropout, or whether anyone trusts the thing.</p>
+    <div class="finding">Roughly 15 to 30% of users cannot reliably control a given motor-imagery BCI regardless of decoder quality, and part of that is an interface artifact rather than a biological ceiling. Six instrumentable open problems follow.</div>
+    <div class="meta">Position paper v1.0 &middot; citation gate cleared 2026-09-04</div>
+  </a>
+
+  <div class="pending">
+    <h3>In progress</h3>
+    <p>The Closing Evidence Atlas, a pre-registered PRISMA 2020 systematic review and Bayesian meta-analysis of 39 named influence techniques. 11,785 records screened; 15 of the 39 techniques have zero peer-reviewed empirical studies behind them. Methods, data and screening decisions are public at github.com/Moranetz/closing-evidence-atlas. The production analysis run is pending, and no headline effect size is claimed here until it lands.</p>
+  </div>
+
+</div>
+
+<div class="series"><a href="https://moranetz.github.io/">&larr; moranetz.github.io</a></div>
+</div>
