@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Closing Evidence Atlas &middot; Marion Moranetz</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Closing Evidence Atlas">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="../paper.css">
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="kicker">Measurement Layer &middot; Paper 05</p>
+    <h1>Fifteen of thirty-nine closing techniques have no evidence at all</h1>
+    <p class="byline"><strong>Marion Moranetz</strong> &middot; Los Altos Hills &middot; Paper v1.0 &middot; k = 39 techniques &middot; 11,785 records screened</p>
+    <div class="headrule" aria-hidden="true"></div>
+    <div class="gate"><div class="lbl">Citation gate</div><p>Pre-registered before the search ran. PRISMA 2020 systematic review, Bayesian random-effects meta-analysis, production run completed 2026-09-04 with exact MCMC. Every fit converged with zero divergent transitions. The paper carries its own headline correction: an earlier pilot estimate overstated how many credible intervals excluded zero, and the correction is logged as a protocol deviation rather than absorbed.</p></div>
+  </header>
+  <article>
+<section class="abstract">
+<div class="lbl">Abstract</div>
+<p>The sales-training industry teaches roughly forty named closing techniques as settled craft. This is a pre-registered PRISMA 2020 systematic review and Bayesian random-effects meta-analysis asking a question nobody appears to have asked in one place: which of them survive contact with the empirical literature? Across seven public databases, 11,785 unique records were screened. <strong>Fifteen of the thirty-nine named techniques have no peer-reviewed empirical study behind them at all.</strong> Of those that do, exactly <strong>two</strong> clear the pre-registered threshold of five or more eligible studies for a primary meta-analysis, and both are message-framing effects at roughly a third of a standard deviation: gain framing at Hedges' <em>g</em> = 0.35, 95% CrI [0.25, 0.46], and loss framing at <em>g</em> = 0.32, [0.21, 0.44]. Neither is a closing technique in the sense the industry sells one. Both are decisions about how to word a message. The analysis is reported with its own headline correction attached: an earlier pilot estimate overstated how many intervals excluded zero, and the correction is logged rather than absorbed.</p>
+</section>
+<section>
+<h2>1. The question, and why it had not been answered</h2>
+<p>Every named closing technique arrives with the same warrant, which is that it works. Assumptive close, alternative choice, puppy dog, takeaway, Ben Franklin, foot in the door. The warrant is almost never a citation. It is a trainer, a book, a floor manager, or a number from a deck with no method behind it.</p>
+<p>That is an odd situation for a body of practice this commercially consequential, and it is a tractable one. The techniques are named, so they are enumerable. Named things can be searched for. If a technique has been tested, the test is findable; if it has not, the absence is itself a finding and the most useful one available.</p>
+<p>So the design here is deliberately unglamorous. Enumerate the taxonomy, pre-register the search and the analysis before running either, screen the corpus, extract what can be extracted, pool what can be pooled, and publish in whichever direction the numbers land.</p>
+</section>
+<section>
+<h2>2. What was done</h2>
+<p>The taxonomy holds <strong>39 named techniques</strong>. The search covered seven public databases: PubMed, OpenAlex, Crossref, Semantic Scholar, arXiv, OSF Registrations and ClinicalTrials.gov. It returned 12,416 raw records, reducing to <strong>11,785 unique</strong> after deduplication.</p>
+<p>Screening ran in stages against pre-registered inclusion criteria. Full-text extraction reached 44 records, of which 26 yielded an effect size convertible to a common scale. The others reported narrative results, F-statistics without degrees of freedom, or nothing extractable from the open-access version, and each is marked as such rather than dropped quietly.</p>
+<p>The meta-analytic model, pre-registered before any analysis ran:</p>
+<ul>
+<li>Study effects distributed Normal around a technique-level mean, with each study's standard error fixed at the extracted value</li>
+<li>A weakly-informative Normal(0, 0.5) prior on the pooled effect, on the Hedges' <em>g</em> scale</li>
+<li>A weakly-informative Half-Normal(0.3) prior on between-study heterogeneity</li>
+<li>Four chains, four thousand iterations, two thousand warmup, seed fixed in advance</li>
+</ul>
+<p>Every fit converged on the first attempt. Worst R-hat across all fits was 1.0038 against a pre-registered gate of 1.01, minimum effective sample size was 1,648 against a gate of 1,000, and there were <strong>zero divergent transitions</strong> anywhere.</p>
+</section>
+<section>
+<h2>3. The result</h2>
+<figure>
+<svg viewBox="0 0 760 400" role="img" aria-label="Forest plot. Two primary techniques with credible intervals excluding zero, four exploratory ones, two of which include zero.">
+  <line x1="286" y1="34" x2="286" y2="326" stroke="#241f19" stroke-width="1" stroke-dasharray="4 4" opacity=".4"/>
+  <text x="286" y="26" class="f-lab" text-anchor="middle">0</text>
+
+  <text x="14" y="50" class="f-key" fill="#4a5d23">PRIMARY &mdash; clears the pre-registered k &ge; 5 bar</text>
+  <g>
+    <line x1="331" y1="82" x2="369" y2="82" stroke="#4a5d23" stroke-width="2.6"/>
+    <circle cx="349" cy="82" r="5" fill="#4a5d23"/>
+    <text x="14" y="79" class="f-body">gain-framing</text>
+    <text x="14" y="94" class="f-lab">k = 9</text>
+    <text x="396" y="86" class="f-key" fill="#4a5d23">0.35 [0.25, 0.46]</text>
+
+    <line x1="323" y1="126" x2="366" y2="126" stroke="#4a5d23" stroke-width="2.6"/>
+    <circle cx="344" cy="126" r="5" fill="#4a5d23"/>
+    <text x="14" y="123" class="f-body">loss-framing</text>
+    <text x="14" y="138" class="f-lab">k = 7</text>
+    <text x="396" y="130" class="f-key" fill="#4a5d23">0.32 [0.21, 0.44]</text>
+  </g>
+
+  <line x1="14" y1="160" x2="746" y2="160" stroke="rgba(36,31,25,.16)" stroke-width="1"/>
+  <text x="14" y="184" class="f-key" fill="#8c1515">EXPLORATORY &mdash; below the bar, reported as underpowered</text>
+  <g>
+    <line x1="319" y1="216" x2="412" y2="216" stroke="#8a6414" stroke-width="2" opacity=".85"/>
+    <circle cx="371" cy="216" r="4.5" fill="#8a6414"/>
+    <text x="14" y="213" class="f-soft">regulatory-fit</text><text x="14" y="228" class="f-lab">k = 3</text>
+    <text x="430" y="220" class="f-lab">0.47 [0.18, 0.70]</text>
+
+    <line x1="302" y1="252" x2="438" y2="252" stroke="#8a6414" stroke-width="2" opacity=".85"/>
+    <circle cx="386" cy="252" r="4.5" fill="#8a6414"/>
+    <text x="14" y="249" class="f-soft">commitment-consistency</text><text x="14" y="264" class="f-lab">k = 2</text>
+    <text x="456" y="256" class="f-lab">0.55 [0.09, 0.85]</text>
+
+    <line x1="261" y1="288" x2="425" y2="288" stroke="#8c1515" stroke-width="2"/>
+    <circle cx="357" cy="288" r="4.5" fill="#8c1515"/>
+    <text x="14" y="285" class="f-soft">extreme-anchor</text><text x="14" y="300" class="f-lab">k = 2</text>
+    <text x="443" y="292" class="f-red">0.39 [&minus;0.14, 0.77] crosses 0</text>
+
+    <line x1="281" y1="322" x2="513" y2="322" stroke="#8c1515" stroke-width="2"/>
+    <circle cx="409" cy="322" r="4.5" fill="#8c1515"/>
+    <text x="14" y="319" class="f-soft">social-proof</text><text x="14" y="334" class="f-lab">k = 2</text>
+    <text x="531" y="326" class="f-red">0.68 [&minus;0.03, 1.26] crosses 0</text>
+  </g>
+
+  <line x1="196" y1="352" x2="700" y2="352" stroke="#241f19" stroke-width="1.2"/>
+  <g class="f-lab" text-anchor="middle">
+    <text x="196" y="370">&minus;0.5</text><text x="286" y="370">0</text><text x="376" y="370">0.5</text>
+    <text x="466" y="370">1.0</text><text x="556" y="370">1.5</text><text x="646" y="370">2.0</text>
+  </g>
+  <text x="448" y="390" class="f-lab" text-anchor="middle">pooled Hedges&rsquo; g, 95% credible interval &middot; 39 techniques, 15 with no study at all, 2 clearing the bar</text>
+</svg>
+<figcaption><b>Figure 1 &mdash; what forty years of sales-closing doctrine reduces to</b>
+Pooled effects from the production run. The pre-registered plan sets the primary model at five or more eligible studies. Two techniques reach it, both are message-framing effects, and both land near a third of a standard deviation with low heterogeneity. The four below the line are shown because hiding them would be the same failure this review documents, not because they are findings. Two of those four cross zero.</figcaption>
+</figure>
+
+<p>The pre-registered plan sets the primary model at five or more eligible studies per technique. Two of thirty-nine reach it.</p>
+<div class="tblwrap"><table><thead><tr><th>Technique</th><th>k</th><th>Hedges' g</th><th>95% CrI</th><th>P(g &gt; 0)</th><th>P(g &gt; 0.20)</th><th>tau</th><th>Prediction interval</th></tr></thead><tbody>
+<tr><td>gain-framing</td><td>9</td><td>0.35</td><td>[0.25, 0.46]</td><td>1.000</td><td>0.996</td><td>0.05</td><td>[+0.16, +0.56]</td></tr>
+<div class="tblwrap"><table><thead><tr><th>loss-framing</th><th>7</th><th>0.32</th><th>[0.21, 0.44]</th><th>1.000</th><th>0.980</th><th>0.05</th><th>[+0.10, +0.55]</th></tr></thead><tbody>
+</tbody></table></div>
+<p>The prediction interval is the line worth reading twice. It is the interval a <em>new</em> study is expected to fall in, not the interval on the average, and for both framing effects it excludes zero. Combined with heterogeneity near 0.05, that says the effect is not merely positive on average but consistent: the corpus is not a scatter of contradictory findings with a positive mean, it is a set of studies that mostly agree.</p>
+<p>Four further techniques produced posteriors but sit below the threshold. They are reported as exploratory and underpowered, because omitting them would be the same selective reporting this review exists to document.</p>
+<div class="tblwrap"><table><thead><tr><th>Technique</th><th>k</th><th>Hedges' g</th><th>95% CrI</th></tr></thead><tbody>
+<tr><td>regulatory-fit</td><td>3</td><td>0.47</td><td>[0.18, 0.70]</td></tr>
+<tr><td>commitment-consistency</td><td>2</td><td>0.55</td><td>[0.09, 0.85]</td></tr>
+<tr><td>extreme-anchor</td><td>2</td><td>0.39</td><td>[−0.14, 0.77]</td></tr>
+<div class="tblwrap"><table><thead><tr><th>social-proof</th><th>2</th><th>0.68</th><th>[−0.03, 1.26]</th></tr></thead><tbody>
+</tbody></table></div>
+<p>At k = 2 a hierarchical model is reporting the prior plus two data points. Every one of these four has a prediction interval spanning zero.</p>
+</section>
+<section>
+<h2>4. The correction</h2>
+<p>The pilot analysis, run with an importance-sampling approximation rather than exact MCMC, reported that five of six credible intervals cleanly excluded zero and exceeded the practical-significance threshold with probability above 0.99. Under exact inference that is wrong on both counts. <strong>Four</strong> of six exclude zero; extreme-anchor and social-proof do not. <strong>Two</strong> of six clear the practical threshold at 0.99; the remainder land at 0.97, 0.95, 0.91 and 0.80.</p>
+<p>What the approximation got right was location. Every production median sits within 0.04 of its pilot counterpart. What it got wrong was interval width, and the claim rested entirely on interval width.</p>
+<p>This is logged as a protocol deviation rather than revised out of sight, and it is left in the paper because a review of unevidenced claims that patched its own overclaim without saying so would be worth less than one that does not.</p>
+</section>
+<section>
+<h2>5. What this does and does not license</h2>
+<p>It does not license the claim that the other thirty-seven techniques do not work. Absence of evidence is what was measured, and for fifteen of them the absence is total: no study, not a null study. The honest statement is that the industry teaches as established a body of practice for which, in most cases, nobody has looked.</p>
+<p>It does license one thing firmly. If a trainer asserts that a specific named close reliably lifts conversion, the burden is now locatable. Either the technique is one of the two with pooled support, in which case the effect is about a third of a standard deviation and the technique is message framing, or the citation does not exist and can be asked for.</p>
+</section>
+<section>
+<h2>6. Limits, stated plainly</h2>
+<ul>
+<li>The binding constraint is <strong>extraction, not search</strong>. The Stage-1 corpus is large; the extracted set is 44 records because open-access full text is what could be read.</li>
+<li>Effect-size conversion from eta-squared, F and t statistics is approximate, and the conversion function is public and auditable.</li>
+<li>The search covered public databases only, which leaves an estimated 5 to 15 percent coverage gap in older marketing-journal records. Logged before results were seen.</li>
+<li>The pre-registered engine was R with brms and Stan. The production run used NumPyro's No-U-Turn sampler after the R toolchain proved uninstallable in the analysis window. Same model, same priors, same seed, same chain and iteration counts. Logged as a deviation.</li>
+<li>Every number here regenerates from the public repository.</li>
+</ul>
+</section>
+<section>
+<h2>Materials</h2>
+<p>Protocol, deviation log, search strategy, screening decisions, extraction sheet, analysis code and results are public at github.com/Moranetz/closing-evidence-atlas. The production run is <code>analysis/02_primary_meta_analysis.py</code>; its output is <code>results/production_run_report.md</code>.</p>
+</section>
+  </article>
+  <div class="series">
+    <strong>The measurement layer</strong><br>
+    <a href="../melanopic/">Filters Don&rsquo;t Work. Palettes Do.</a> &middot;
+    <a href="../neuroaesthetics/">Measured Neuroaesthetics</a> &middot;
+    <a href="../neural-interface-ux/">The Unmeasured Half of the Neural Interface</a> &middot;
+    <a href="../evolved-substrate/">The Evolved Substrate</a> &middot;
+    <a href="../closing-evidence-atlas/">The Closing Evidence Atlas</a> &middot;
+    <a href="../">Index</a>
+  </div>
+  <footer>
+    <div><a href="https://moranetz.github.io/">moranetz.github.io</a></div>
+    <div>Every citation graded on the page. Sources that could not be verified are printed as unverified.</div>
+  </footer>
+</div>
+</body>
+</html>
