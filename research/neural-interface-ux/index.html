@@ -1,44 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Unmeasured Half of the Neural Interface</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Unmeasured Half of the Neural Interface &middot; Marion Moranetz</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="The Unmeasured Half of the Neural Interface">
+<meta property="og:type" content="article">
 <link rel="stylesheet" href="../paper.css">
-<div class="wrap">
-<header>
-  <div class="eyebrow">Measurement layer &middot; Paper 03</div>
-  <h1>Brain-computer UX is a <em>trust-and-measurement</em> problem</h1>
-  <p class="byline"><b>Marion Moranetz</b> &middot; 2026 &middot; moranetz.github.io<br>Position paper v1.0</p>
-  <div class="gate">
-    <div class="lbl">Citation gate</div>
-    <p>Cleared 2026-09-04. Every item previously graded LIKELY was re-verified against a primary source and upgraded, including both neural-privacy bill numbers, which were confirmed against the legislatures&rsquo; own texts. No citation in this paper is unverified. One company, Subsense Inc, could not be verified and is marked as such rather than described.</p>
-  </div>
-  <div class="grades">
-    <span class="g v">VERIFIED primary source confirmed</span>
-    <span class="g l">LIKELY inference, not source</span>
-    <span class="g c">CONTESTED real but disputed</span>
-  </div>
-</header>
-<section>
-<section><h2>Abstract</h2>
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="kicker">Measurement Layer &middot; Paper 03</p>
+    <h1>Brain-computer UX is a trust-and-measurement problem</h1>
+    <p class="byline"><strong>Marion Moranetz</strong> &middot; San Francisco &middot; Position paper v1.0</p>
+    <div class="headrule" aria-hidden="true"></div>
+    <div class="gate"><div class="lbl">Citation gate</div><p>Cleared 2026-09-04. Every item previously graded <span class="g l">LIKELY</span> was re-verified against a primary source and upgraded, including both neural-privacy bill numbers, confirmed against the legislatures&rsquo; own texts. One company, Subsense Inc, could not be verified and is marked as such rather than described.</p></div>
+  </header>
+  <article>
+<section class="abstract">
+<div class="lbl">Abstract</div>
 <p>Neural-interface research optimizes the decoder. It has spent two decades improving how accurately a machine reads a brain, measured almost entirely by one metric — Information Transfer Rate. But ITR measures decoder throughput, not whether a system is usable, trustworthy, or sustainable to live with. This paper argues that the <em>other half</em> of the neural interface — how it presents its read of you back to you, how much it costs you to use, and whether you can calibrate trust in a system that infers your own internal state — is under-instrumented and under-theorized, and that it is a <strong>measurement-and-trust problem a behavioral scientist is positioned to own, not a hardware problem.</strong> The claim is deliberately narrow: the field is not empty — passive-BCI and neuroergonomics researchers have touched every piece of this — but no one has approached it as a first-class measurement-and-trust-calibration problem the way a behavioral scientist would. Six concrete, instrumentable open problems follow.</p>
-</section><section><h2>1. The metric only measures one side</h2>
+</section>
+<section>
+<h2>1. The metric only measures one side</h2>
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-label="Information Transfer Rate accounts for three decoder terms and has no term for four user-side terms.">
+  <text x="20" y="26" class="f-key">WHAT ITR COUNTS</text>
+  <text x="400" y="26" class="f-red">WHAT IT HAS NO TERM FOR</text>
+  <line x1="380" y1="10" x2="380" y2="220" stroke="#241f19" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+
+  <g>
+    <rect x="20" y="42" width="330" height="34" fill="rgba(74,93,35,.10)" stroke="rgba(74,93,35,.4)"/>
+    <text x="34" y="64" class="f-body">number of classes</text>
+    <rect x="20" y="84" width="330" height="34" fill="rgba(74,93,35,.10)" stroke="rgba(74,93,35,.4)"/>
+    <text x="34" y="106" class="f-body">classification accuracy</text>
+    <rect x="20" y="126" width="330" height="34" fill="rgba(74,93,35,.10)" stroke="rgba(74,93,35,.4)"/>
+    <text x="34" y="148" class="f-body">trial duration</text>
+  </g>
+  <g>
+    <rect x="400" y="42" width="340" height="34" fill="rgba(140,21,21,.06)" stroke="rgba(140,21,21,.3)" stroke-dasharray="4 3"/>
+    <text x="414" y="64" class="f-body">user effort</text>
+    <rect x="400" y="84" width="340" height="34" fill="rgba(140,21,21,.06)" stroke="rgba(140,21,21,.3)" stroke-dasharray="4 3"/>
+    <text x="414" y="106" class="f-body">fatigue over a session</text>
+    <rect x="400" y="126" width="340" height="34" fill="rgba(140,21,21,.06)" stroke="rgba(140,21,21,.3)" stroke-dasharray="4 3"/>
+    <text x="414" y="148" class="f-body">dropout</text>
+    <rect x="400" y="168" width="340" height="34" fill="rgba(140,21,21,.06)" stroke="rgba(140,21,21,.3)" stroke-dasharray="4 3"/>
+    <text x="414" y="190" class="f-body">whether the person trusts the read</text>
+  </g>
+
+  <line x1="20" y1="238" x2="740" y2="238" stroke="#241f19" stroke-width="1.2"/>
+  <rect x="20" y="238" width="108" height="14" fill="#8c1515" opacity="0.85"/>
+  <rect x="128" y="238" width="88" height="14" fill="#8c1515" opacity="0.35"/>
+  <text x="20" y="272" class="f-red">15%</text>
+  <text x="216" y="272" class="f-red" text-anchor="end">30%</text>
+  <text x="232" y="250" class="f-soft">of users cannot reliably control a given motor-imagery BCI,</text>
+  <text x="232" y="266" class="f-soft">however good the decoder is (Vidaurre &amp; Blankertz 2010)</text>
+</svg>
+<figcaption><b>Figure 1 &mdash; the metric and its blind side</b>
+Information Transfer Rate is built from three decoder terms and carries no term for anything the user experiences. A system can post a high number and be exhausting inside ten minutes. The band underneath is the share of people who cannot drive a motor-imagery BCI at all regardless of decoder quality, and part of that turns out to be an interface artifact rather than a biological ceiling.</figcaption>
+</figure>
+
 <p>The dominant performance metric is Information Transfer Rate (Wolpaw et al. 2002; bits/min from class count, accuracy, trial duration) — <span class="g v">VERIFIED</span>. It rewards more classes and faster trials, with <strong>no term for user effort, fatigue, dropout, or subjective experience.</strong> A system can post a high ITR and be exhausting to use for ten minutes.</p>
 <p>Alongside it sits a problem hardware has not solved: <strong>BCI "illiteracy."</strong> Roughly 15–30% of users cannot reliably control a given motor-imagery BCI regardless of decoder quality (Vidaurre &amp; Blankertz 2010 — <span class="g v">VERIFIED</span>; Allison &amp; Neuper 2010 — <span class="g v">VERIFIED</span> — frame it as a population-level <em>design</em> failure, not a user failure). Crucially, part of it is an interface artifact, not a biological ceiling: Carabalona (2017, <em>Front. Neurosci.</em> — <span class="g v">VERIFIED</span>) shows P300 "illiteracy" is partly a stimulus-design problem. And session performance degrades as attention and fatigue degrade the very signal the system depends on — a vicious loop (Myrden &amp; Chau 2015 — <span class="g v">VERIFIED</span>), instrumented from psychology (NASA-TLX) but never built into the interface itself.</p>
 <p><strong>The gap, stated as a measurement problem:</strong> the field has a metric for how many bits the decoder extracts and no adopted metric for what those bits cost the user. A validated "usable bits/min" or session-cost index — effort, fatigue, dropout risk, subjective burden, comparable across studies — is a concrete, citable instrument, exactly the specialty a measurement-builder brings.</p>
-</section><section><h2>2. Passive BCI inverts the human-factors problem</h2>
+</section>
+<section>
+<h2>2. Passive BCI inverts the human-factors problem</h2>
 <p>The product-relevant branch is passive / neuroadaptive BCI (Zander &amp; Kothe 2011, the active/reactive/passive taxonomy — <span class="g v">VERIFIED</span>). Here the user does not intentionally drive anything; the system reads state (workload, attention, engagement, error-awareness) and acts. The mature real-world use is safety-critical operator monitoring: adaptive automation for air-traffic controllers (Di Flumeri et al. 2019 — <span class="g v">VERIFIED</span>), dry-EEG for drivers (Zander et al. 2017 — <span class="g v">VERIFIED</span>), adaptive instruction under cognitive load (Gerjets et al. 2014; Beauchemin et al. 2024 — <span class="g v">VERIFIED</span>), and the case for mental-state-based adaptive interfaces over long sessions (Hinss et al. 2022 — <span class="g v">VERIFIED</span>). This is the branch closest to funded, defensible deployment — aviation, defense, industrial — as opposed to earlier-stage consumer neurotech, and it is the branch that ties directly to human-machine teaming.</p>
 <p>The inversion: passive systems don't need to solve intentional-control illiteracy, but they inherit a harder problem. <strong>State inference is probabilistic and often wrong, and the system now acts on a guess about your internal state.</strong> The human-factors question shifts from "can I drive this" to "do I trust what it just did, and did it do the right thing."</p>
-</section><section><h2>3. The readback problem: no framework for what a neural interface should show you</h2>
+</section>
+<section>
+<h2>3. The readback problem: no framework for what a neural interface should show you</h2>
 <p>There is an active neurofeedback-modality literature, but it answers "which sensory channel best <em>trains</em> a target brain state," not "what information architecture, timing, and framing should govern how a system communicates its inferred read of you <em>back</em> to you." Those are different questions, and the second — the UX/trust question — is essentially unframed. Reviews categorize feedback mechanisms (Zhang et al. 2026 — <span class="g v">VERIFIED</span>) without prescribing which to choose for a given cognitive-load or attention state; the field's own researchers gesture at the gap ("more entertaining, multimodal, adaptive feedback might improve UX" — Kober, Wood &amp; Berger 2024, <span class="g v">VERIFIED</span>) without formalizing it.</p>
 <p>Neural interfaces carry a wrinkle no adjacent field has: <strong>feedback about your own inferred state can change that state</strong> — telling someone "you look distracted" measurably shifts attention and arousal (an observer effect unique to this domain). Almost no reviewed work treats this as a design constraint. Aviation alarm-design (urgency × modality × false-alarm cost) and mobile-HCI interruption research (interruption cost as a function of task state) are the analogues that exist elsewhere and do not exist for neural readback. <strong>Status: <span class="g l">OPEN</span>.</strong> The honest claim is not "nobody has looked" but "the pieces are touched, adjacent to their authors' specialties; no transferable design framework exists."</p>
-</section><section><h2>4. The trust problem is a cognitive-attack-surface problem pointed inward</h2>
+</section>
+<section>
+<h2>4. The trust problem is a cognitive-attack-surface problem pointed inward</h2>
 <p>Automation-bias research shows people mis-calibrate trust in automated agents — too much or too little (de Visser et al. 2018 — <span class="g v">VERIFIED</span>). But that research was built for systems acting on <em>external</em> data the user can independently check: radar, a thermostat. <strong>Neural state inference removes the independent check.</strong> When a neuroadaptive system reallocates a task, suppresses a notification, or escalates an alert because it inferred you were overloaded, you often cannot verify or contest its read of <em>you</em>. That is a categorically different trust problem than trusting a system's read of the external world, and I did not find literature that names the asymmetry and treats it as the design problem it is (<strong><span class="g l">OPEN</span></strong>).</p>
 <p>This is the same structure as the Cognitive Attack Surface, turned inward: a system acting on a probabilistic model of your internal state, with the disclosure and calibration questions front and center. The countermeasures transfer — confidence display, disclosure of the inferred read, override affordances that don't themselves spike cognitive load, calibration instrumentation — and designing them is a measurement-and-trust problem, not a decoder problem. Ehrlich et al. (2023, <span class="g v">VERIFIED</span>) already show systems acting <em>preemptively</em> on anticipatory neural responses, which is where "who decided that" stops being philosophical.</p>
-</section><section><h2>5. The governance context is arriving fast</h2>
+</section>
+<section>
+<h2>5. The governance context is arriving fast</h2>
 <p>Neurorights is now a live legislative area, which makes trust and disclosure not just UX but compliance: Canada federally protected neural data (Feb 2026 — <span class="g v">VERIFIED</span> via the Neurorights Foundation); the US MIND Act was introduced Sept 2025 (<span class="g v">VERIFIED</span>); Colorado (HB24-1058, signed 2024-04-17, in force 2024-08-07) and California (SB 1223, signed 2024-09-28, Chapter 887, in force 2025-01-01) amended their privacy acts to classify neural data as sensitive (<span class="g v">VERIFIED</span> — both bill numbers confirmed against the legislatures' own texts). A system that infers internal state and cannot explain or let the user contest its read is walking into this. Trust-calibration design is becoming a regulatory surface, not only a UX nicety.</p>
-</section><section><h2>6. Six open problems a measurement specialist can own</h2>
+</section>
+<section>
+<h2>6. Six open problems a measurement specialist can own</h2>
 <p>Each is a problem a behavioral scientist — not a hardware or ML engineer — is the right kind of expert for:</p>
 <p>1. <strong>A usability metric beside ITR</strong> — a validated "usable bits/min" / session-cost index (effort, fatigue, dropout, subjective burden), comparable across studies. A literal measurement-instrument contribution.</p>
 <p>2. <strong>A feedback-timing/modality framework for neural readback</strong>, grounded in attention and cognitive-load theory rather than case-by-case modality trials — designed experiments manipulating interruption cost, framing, and modality against measured attention/arousal.</p>
@@ -46,13 +94,19 @@
 <p>4. <strong>Illiteracy as a design variable, not a user trait</strong> — treating "can't produce a usable signal" as an interaction-design failure to test and iterate, following Carabalona's crack.</p>
 <p>5. <strong>Platform-scale interaction standards</strong> for when BCI becomes an OS input method (Synchron × Apple is the leading indicator, May–Aug 2025 — <span class="g v">VERIFIED</span>) — the conventions touch and voice each needed, built by HCI researchers, not hardware engineers, and not yet built for neural input.</p>
 <p>6. <strong>Reward/engagement design for neurofeedback and closed-loop training</strong> — variable-reward and engagement-without-surveillance-anxiety as first-class design variables, which the neurofeedback literature treats as a training-efficacy afterthought. Directly the reward-circuitry work of the Cognitive Attack Surface papers.</p>
-</section><section><h2>7. The honest thesis</h2>
+</section>
+<section>
+<h2>7. The honest thesis</h2>
 <p>Not "nobody has looked at neural-interface UX" — Zander/Kothe-lineage passive-BCI work, Hinss et al. (2022), and Gerjets et al. (2014) each touch pieces of it, and a credible paper cites them as partial precedent. The sharper, defensible claim: <strong>the pieces have been touched by neuroscientists and HCI researchers working adjacent to their own specialty; no one has approached neural-interface UX as a first-class measurement-and-trust-calibration problem the way a behavioral scientist would.</strong> That is the seat this program takes.</p>
-</section><section><h2>Note on the industry frame</h2>
+</section>
+<section>
+<h2>Note on the industry frame</h2>
 <p>Company facts (Neuralink human trials from Jan 2024; Synchron's Apple/NVIDIA OS-integration play; Precision Neuroscience's April 2025 510(k); Blackrock's company-reported metrics — treat as company claims) were live-verified this pass and date the inflection toward platform-scale neural UX. <strong>Subsense Inc could not be verified</strong> — no public footprint was found this pass (subsense.ai is a parked domain). It is likely an early/stealth company; confirm what it builds directly with the contact before citing it. Do not describe Subsense's product from assumption.</p>
-</section><section><h2>References</h2>
+</section>
+<section>
+<h2>References</h2>
 <p>All entries verified against a primary source or the issuing body on 2026-09-04.</p>
-<ul>
+<ul class="refs">
 <li>Allison, B. Z., &amp; Neuper, C. (2010). Could anyone use a BCI? In D. Tan &amp; A. Nijholt (Eds.), <em>Brain-Computer Interfaces: Applying our Minds to Human-Computer Interaction</em> (pp. 35–54). Springer, London.</li>
 <li>Beauchemin, N., et al. (2024). Neuroergonomics / operator-state monitoring.</li>
 <li>Carabalona, R. (2017). The role of the interface in P300 BCI "illiteracy". <em>Frontiers in Neuroscience</em>, 11:363.</li>
@@ -72,10 +126,19 @@
 <p><strong>Legislation.</strong> Colorado HB24-1058 (2024), amending the Colorado Privacy Act to define biological and neural data as sensitive data; signed 2024-04-17, in force 2024-08-07. California SB 1223 (2024), Chapter 887, amending the CCPA to classify neural data as sensitive personal information; signed 2024-09-28, in force 2025-01-01. Canada federal neural-data protection (Feb 2026) and the US MIND Act (introduced Sept 2025) per the Neurorights Foundation.</p>
 <p><strong>Unverifiable, and marked as such.</strong> Subsense Inc could not be verified: no public footprint was found (subsense.ai is a parked domain). It is likely early or stealth. Do not describe its product from assumption; confirm directly with the contact before citing.</p>
 </section>
-<div class="series">Part of the measurement-layer series &middot;
-<a href="../melanopic/">Filters Don&rsquo;t Work. Palettes Do.</a> &middot;
-<a href="../neuroaesthetics/">Measured Neuroaesthetics</a> &middot;
-<a href="../neural-interface-ux/">The Unmeasured Half of the Neural Interface</a> &middot;
-<a href="../evolved-substrate/">The Evolved Substrate</a> &middot;
-<a href="../">Index</a></div>
+  </article>
+  <div class="series">
+    <strong>The measurement layer</strong><br>
+    <a href="../melanopic/">Filters Don&rsquo;t Work. Palettes Do.</a> &middot;
+    <a href="../neuroaesthetics/">Measured Neuroaesthetics</a> &middot;
+    <a href="../neural-interface-ux/">The Unmeasured Half of the Neural Interface</a> &middot;
+    <a href="../evolved-substrate/">The Evolved Substrate</a> &middot;
+    <a href="../">Index</a>
+  </div>
+  <footer>
+    <div><a href="https://moranetz.github.io/">moranetz.github.io</a></div>
+    <div>Every citation graded on the page. Sources that could not be verified are printed as unverified.</div>
+  </footer>
 </div>
+</body>
+</html>
