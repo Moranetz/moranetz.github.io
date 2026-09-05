@@ -77,6 +77,26 @@
   .byline{color:var(--sub);font-family:Inter,sans-serif;font-size:14px;margin-top:8px}
   .byline b{color:var(--ink)}
   @media(max-width:640px){.fp{grid-template-columns:1fr}.two{grid-template-columns:1fr}.bar{grid-template-columns:120px 1fr 54px}}
+
+  /* print: the screen design is dark by intent; PDF must be legible on paper */
+  @media print {
+    body{background:#fff !important;color:#14171f !important;background-image:none !important}
+    .wrap{max-width:100%;padding:0}
+    .eyebrow,.pk,.fig .cap{color:#8c1515 !important}
+    h1,h2,.figtitle{color:#14171f !important}
+    h1 em{color:#8c1515 !important}
+    .deck,.figsub,.tag,.fignote,.axlab{color:#4a5260 !important}
+    .deck b{color:#14171f !important}
+    .val{fill:#14171f !important}
+    .axlab{fill:#4a5260 !important}
+    .pk{fill:#8c1515 !important}
+    .fig{background:#fff !important;border:1px solid #c9ccd4 !important;box-shadow:none !important;
+         page-break-inside:avoid;break-inside:avoid}
+    .fpcard{background:#fff !important;border-color:#c9ccd4 !important}
+    .fpcard.win{background:#fff !important;border-color:#8c1515 !important}
+    .track{background:#e8eaee !important}
+    a{color:#14171f !important;text-decoration:none}
+  }
 </style>
 <div class="wrap">
   <div class="eyebrow">Neuroaesthetics · measured · melanopic dose of screen palettes</div>
