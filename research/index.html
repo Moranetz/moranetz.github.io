@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Measurement Layer &middot; Marion Moranetz</title>
-<meta name="description" content="Instruments that turn felt, subjective phenomena into numbers somebody else can check.">
+<meta name="description" content="Research by Marion Moranetz on the people who run autonomous systems, and instruments that turn felt experience into numbers somebody else can check.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="The Measurement Layer">
 <meta property="og:description" content="Instruments that turn felt, subjective phenomena into numbers somebody else can check.">
@@ -33,6 +33,12 @@
     letter-spacing:.12em; text-transform:uppercase; color: var(--ink-soft);
   }
   .paper:hover h2 { color: var(--cardinal); }
+  .section { margin-top: 56px; scroll-margin-top: 24px; }
+  .section > .lbl { font-family: var(--mono); font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color: var(--cardinal); font-weight:650; }
+  .section > h2.sec { margin: 8px 0 10px; font-size:1.6rem; }
+  .section > p.intro { color: var(--ink-soft); margin: 0 0 18px; }
+  .toc { font-family: var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; margin-top: 10px; }
+  .toc a { color: var(--cardinal); text-decoration:none; margin-right: 18px; }
   .pending { padding: 26px 0 4px; }
   .pending .num { font-family: var(--mono); font-size:.66rem; letter-spacing:.2em;
     text-transform:uppercase; color: var(--ink-soft); font-weight:650 }
@@ -45,23 +51,61 @@
   <header>
     <p class="kicker">Marion Moranetz &middot; Research</p>
     <h1>The measurement layer.</h1>
+    <p class="toc"><a href="#defense">Defense</a><a href="#neuro">Neuro</a><a href="#behavior">Behavior &amp; evidence</a></p>
     <p class="byline"><a href="https://moranetz.github.io/">moranetz.github.io</a></p>
     <div class="headrule" aria-hidden="true"></div>
   </header>
 
   <article>
-    <section class="abstract">
-      <div class="lbl">The programme</div>
-      <p>Neurotech has hardware builders and it has theorists. Almost nobody turns a felt, subjective phenomenon into a number somebody else can check. Each paper here is an instrument pointed at something a field currently asserts without measuring: what a night mode actually does to you, what makes a screen feel good, what a brain-computer interface never measures about the person using it, and why any of these regularities exist to be exploited in the first place.</p>
-    </section>
-
     <div class="gate">
       <div class="lbl">Standing rule</div>
       <p>Every citation is graded, and the grade sits on the page beside the claim. <span class="g v">VERIFIED</span> means a primary source was opened and says what it is cited for. <span class="g c">CONTESTED</span> means the finding is real, disputed, and the dispute is named. Sources that could not be verified are printed as unverified rather than dropped, corrections to earlier drafts are marked in the text rather than swapped out, and the folklore each field repeats is quarantined by name.</p>
     </div>
 
+  <section class="section" id="defense">
+    <div class="lbl">Defense &middot; Field Notes on the Operator Layer</div>
+    <h2 class="sec">The people who run the machines</h2>
+    <p class="intro">Militaries can now buy drones, robots and targeting software faster than they can prepare the people who run them. These four open-source reviews follow that gap through Ukraine, the Iran war and the U.S. Army&rsquo;s own statements. Every claim carries an evidence tier and a link, and every paper ends with its limits.</p>
     <div class="papers">
+      <a class="paper" href="defense/340000-drones/">
+        <div class="num">No. 1 &middot; Operators</div>
+        <h2>340,000 Drones, 3,000 Dedicated Pilots</h2>
+        <p class="sum">The Army plans about 340,000 small drones over two years and projects 2,000 to 3,000 soldiers whose full-time job is flying drones.</p>
+        <p class="finding">RUSI found that 60 to 80 percent of Ukrainian FPV drones fail to reach their target and names operator skill as one of two causes. The paper closes with six measures any training program could report, and none currently does.</p>
+        <div class="meta">Open-source review v1.0 &middot; 15 references</div>
+      </a>
+      <a class="paper" href="defense/3-6-seconds/">
+        <div class="num">No. 2 &middot; The kill chain</div>
+        <h2>One Targeting Decision Every 3.6 Seconds</h2>
+        <p class="sum">Software let a 20-person targeting cell match the output of a 2,000-person cell from the Iraq War, and the Army now wants a thousand decisions an hour.</p>
+        <p class="finding">Patriot&rsquo;s 2003 fratricides and thirty years of human-factors research point the same way. Training is necessary, and automation bias survives it, so part of the fix has to live in the system.</p>
+        <div class="meta">Open-source review v1.0 &middot; 12 references</div>
+      </a>
+      <a class="paper" href="defense/4-million-answer/">
+        <div class="num">No. 3 &middot; Cost exchange</div>
+        <h2>The $4 Million Answer to a $35,000 Drone</h2>
+        <p class="sum">A Patriot interceptor costs about $4 million. A Shahed attack drone costs tens of thousands.</p>
+        <p class="finding">The Iran war used up half to two-thirds of some U.S. interceptor stocks. Ukraine&rsquo;s $1,000 interceptor drones narrow the gap, and each still needs a person flying its final seconds.</p>
+        <div class="meta">Open-source review v1.0 &middot; 11 references</div>
+      </a>
+      <a class="paper" href="defense/ukraine-capacity/">
+        <div class="num">No. 4 &middot; Industry</div>
+        <h2>Ukraine Can Build Three Times What It Can Afford</h2>
+        <p class="sum">Ukraine&rsquo;s spare defense production capacity is estimated at &euro;30.5 billion, and procurement uses about 30 percent of it.</p>
+        <p class="finding">In every partnership now running, the partner brings the money or the market and Ukraine keeps the design. A drone supply chain outside China is the piece neither side has built.</p>
+        <div class="meta">Open-source review v1.2 &middot; 10 references</div>
+      </a>
+    </div>
+  </section>
+  <section class="section" id="neuro">
+    <div class="lbl">Neuro &middot; The measurement layer</div>
+    <h2 class="sec">Instruments for felt experience</h2>
+    <section class="abstract">
+      <div class="lbl">The programme</div>
+      <p>Neurotech has hardware builders and it has theorists. Almost nobody turns a felt, subjective phenomenon into a number somebody else can check. Each paper here is an instrument pointed at something a field currently asserts without measuring: what a night mode actually does to you, what makes a screen feel good, what a brain-computer interface never measures about the person using it, and why any of these regularities exist to be exploited in the first place.</p>
+    </section>
 
+    <div class="papers">
       <a class="paper" href="melanopic/">
         <div class="num">Paper 01 &middot; Light</div>
         <h2>Filters Don&rsquo;t Work. Palettes Do.</h2>
@@ -69,7 +113,6 @@
         <p class="finding">Kindle&rsquo;s sepia mode doses at 76% of white, because it is bright. Warmth is a decoy and luminance is what matters. A red filter strong enough to cut dose 21&times; collapses body text to APCA Lc 9.7, so there is nothing usable in between.</p>
         <div class="meta">Instrument &middot; melanopic.py, screen_dose.py</div>
       </a>
-
       <a class="paper" href="neuroaesthetics/">
         <div class="num">Paper 02 &middot; Aesthetics</div>
         <h2>Measured Neuroaesthetics</h2>
@@ -77,7 +120,6 @@
         <p class="finding">The one mechanism that is not a static pixel property, the split between liking and wanting, is exactly what separates good design from a dark pattern. Aesthetic quality and manipulation are read on the same axis in opposite directions.</p>
         <div class="meta">Paper v1.0 &middot; gate cleared 2026-09-04</div>
       </a>
-
       <a class="paper" href="neural-interface-ux/">
         <div class="num">Paper 03 &middot; Neural interfaces</div>
         <h2>The Unmeasured Half of the Neural Interface</h2>
@@ -85,7 +127,6 @@
         <p class="finding">ITR has no term for effort, fatigue, dropout, or trust. Meanwhile 15 to 30% of users cannot reliably control a given motor-imagery BCI regardless of decoder quality, and part of that is an interface artifact rather than a biological ceiling.</p>
         <div class="meta">Position paper v1.0 &middot; gate cleared 2026-09-04</div>
       </a>
-
       <a class="paper" href="evolved-substrate/">
         <div class="num">Paper 04 &middot; Ultimate causes</div>
         <h2>The Evolved Substrate of Human Influenceability</h2>
@@ -93,7 +134,13 @@
         <p class="finding">The exploitable regularities are not bugs. They are adaptations running outside their design environment, which is why naming the system under a technique turns &ldquo;this feels manipulative&rdquo; into a question with an answer: which system is being triggered, and is the trigger honest?</p>
         <div class="meta">Paper v1.0 &middot; gate found and fixed three substantive defects</div>
       </a>
-
+    </div>
+  </section>
+  <section class="section" id="behavior">
+    <div class="lbl">Behavior &amp; evidence</div>
+    <h2 class="sec">Claims about people, graded</h2>
+    <p class="intro">Earlier work that audits widely taught claims about persuasion and group behavior against the published evidence, under the same grading rule.</p>
+    <div class="papers">
       <a class="paper" href="closing-evidence-atlas/">
         <div class="num">Paper 05 &middot; Evidence audit</div>
         <h2>The Closing Evidence Atlas</h2>
@@ -101,7 +148,6 @@
         <p class="finding">Fifteen of the thirty-nine have no peer-reviewed empirical study behind them at all. Exactly two clear the pre-registered threshold for a primary meta-analysis, both are message-framing effects near a third of a standard deviation, and neither is a closing technique in the sense the industry sells one.</p>
         <div class="meta">Paper v1.0 &middot; production run complete &middot; zero divergent transitions</div>
       </a>
-
       <a class="paper" href="value-ledger/">
         <div class="num">Paper 06 &middot; Social dynamics</div>
         <h2>The Value Ledger</h2>
@@ -109,7 +155,6 @@
         <p class="finding">Value to the group is the master variable, and it cannot simply be claimed. That is why the machinery is built the way it is: honest signalling to make claims expensive, two separate routes to status, a distributed reputation ledger, and a defensive layer for catching people who fake all three.</p>
         <div class="meta">Paper v1.0 &middot; partial citation gate, stated on the page</div>
       </a>
-
       <a class="paper" href="conveying-value/">
         <div class="num">Paper 07 &middot; Companion brief</div>
         <h2>Conveying Value to the Tribe</h2>
@@ -117,9 +162,8 @@
         <p class="finding">Cheap talk gets discounted, which is the whole reason value has to be shown rather than asserted. Warmth and competence are the two axes a person is read on before anything else is processed.</p>
         <div class="meta">Companion brief v1.0</div>
       </a>
-
-
     </div>
+  </section>
   </article>
 
   <footer>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Software shrank a targeting cell from 2,000 people to 20. What Patriot's 2003 fratricides and the human-factors literature say about the person left at the decision point.">
+<meta property="og:title" content="One Targeting Decision Every 3.6 Seconds">
+<meta property="og:description" content="Software shrank a targeting cell from 2,000 people to 20. What Patriot's 2003 fratricides and the human-factors literature say about the person left at the decision point.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moranetz.github.io/research/defense/3-6-seconds/">
+<meta name="author" content="Marion Moranetz">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>One Targeting Decision Every 3.6 Seconds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../field-notes.css">
+</head>
+<body>
+<div class="page">
+  <div class="series"><a href="/research/#defense">Field Notes on the Operator Layer</a><span>No. 2 · November 2026</span></div>
+
+  <div class="titleblock">
+    <div class="kicker">Open-Source Review · v1.0 · Every Source Linked</div>
+    <h1 class="title">One Targeting Decision Every 3.6 Seconds</h1>
+    <div class="subtitle">The Army's goal for its firing units, and what it asks of the people left at the decision point: lessons from Patriot, the human-factors literature and current U.S. policy</div>
+    <div class="byline"><span class="name">Marion Moranetz</span></div>
+    <div class="affil">Independent research</div>
+    <div class="vermeta">2026-11 · every claim tagged by evidence tier · primary documents read at source where available</div>
+  </div>
+
+  <div class="abstract">
+    <div class="lab">Abstract</div>
+    <p>Targeting software has compressed the staff of the kill chain by two orders of magnitude. CSET reports that the 18th Airborne Corps matched the performance of the Iraq War's time-critical targeting cell with roughly <b>20 people</b> against that cell's <b>2,000+</b>, and the Army now aims for firing units to make <b>one thousand</b> targeting decisions an hour. I examine what that load asks of the people left at the decision point. Patriot's 2003 fratricides, in which two of 11 ballistic-missile engagements struck friendly aircraft, followed the pattern the Army's own investigator described: rising automation, falling operator training and naive trust. Four findings from the human-factors literature explain the mechanism, and one limits the remedy. Automation bias appears in experts and "cannot be prevented by training or instructions." U.S. policy requires "appropriate levels of human judgment" over the use of force but does not define the decision rate at which that judgment holds. I propose four measurable design limits for the human decision point.</p>
+    <div class="keywords">Keywords: kill chain · human-machine teaming · automation bias · vigilance · trust calibration · DoD Directive 3000.09</div>
+  </div>
+  <hr class="rule-cap">
+
+  <h2 class="ch"><span class="num">1</span>&ensp;Introduction</h2>
+  <p>"Kill chain" is the military's term for the steps that lead to engaging a target. In Christian Brose's widely read framing, it reduces to understanding the situation, deciding what to do, then acting.<sup><a href="#r5">5</a></sup> Sensors and software have sped up the first and last steps enormously. The middle step is still a person, and that person now carries a load that thousands used to share.</p>
+
+  <h3 class="sec"><span class="num">1.1</span>Research questions</h3>
+  <ul class="rq">
+    <li><span class="tag">RQ-1</span>How far has software compressed the human staff of the kill chain, and what decision rate is now being sought?</li>
+    <li><span class="tag">RQ-2</span>What happened the last time automation outran operator preparation?</li>
+    <li><span class="tag">RQ-3</span>What does human-factors research say about supervising fast automation, and can training fix it?</li>
+    <li><span class="tag">RQ-4</span>What does current policy require of the human decision, and what would make it measurable?</li>
+  </ul>
+
+  <h3 class="sec"><span class="num">1.2</span>Method and evidence tiers</h3>
+  <p>Structured review of public sources. Claims carry the series' four tiers: <span class="tier p">PRIMARY</span> official document, report or peer-reviewed paper read at source; <span class="tier r">REPORTED</span> official statement as reported by a named outlet; <span class="tier e">ESTIMATE</span> analyst estimate or disputed figure; <span class="tier i">INFERENCE</span> my reasoning. Quotations were checked against source text.</p>
+
+  <h2 class="ch"><span class="num">2</span>&ensp;Findings</h2>
+
+  <h3 class="sec"><span class="num">2.1</span>The staff collapsed and the decisions stayed (RQ-1)</h3>
+  <p>CSET's case study of Maven Smart System describes the manual targeting process as "riddled with inefficiencies and the potential for errors—from collecting the data to processing it, seeking permission, matching munitions, and granting permission." Using the system, the 18th Airborne Corps matched the time-critical targeting cell from Operation Iraqi Freedom, "widely viewed as the most efficient in U.S. military history," with roughly 20 people against more than two thousand. Army leaders now want firing units "to make one thousand high-quality decisions—choosing and dismissing targets—on the battlefield in one hour."<sup><a href="#r1">1</a></sup> <span class="tier p">PRIMARY</span></p>
+  <div class="tablewrap"><table class="bt">
+    <caption><b>Table 1.</b> What a thousand decisions an hour means per person. Illustrative bounds; the Army has not said how many people would share the goal.</caption>
+    <thead><tr><th>Decisions spread across</th><th>Per person per hour</th><th>Time per decision</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td class="k">One cell as a whole</td><td class="num">1,000</td><td class="num">3.6 s</td><td><span class="tier i">INFERENCE</span></td></tr>
+      <tr><td class="k">20 people, all deciding</td><td class="num">50</td><td class="num">72 s</td><td><span class="tier i">INFERENCE</span></td></tr>
+      <tr><td class="k">2,000 people (2003 staffing)</td><td class="num">0.5</td><td class="num">2 h</td><td><span class="tier i">INFERENCE</span></td></tr>
+    </tbody>
+  </table></div>
+  <p>The Army's goal counts dismissals as decisions. Dismissing a target is as consequential as choosing one and much harder to audit, because nobody reviews the target that was correctly let go. <span class="tier i">INFERENCE</span></p>
+
+  <h3 class="sec"><span class="num">2.2</span>Patriot ran this experiment in 2003 (RQ-2)</h3>
+  <p>In Operation Iraqi Freedom, Patriot batteries shot down a British Tornado and a U.S. Navy F/A-18. Two of 11 ballistic-missile engagements were fratricides.<sup><a href="#r2">2</a></sup> <span class="tier p">PRIMARY</span> John Hawley, the Army Research Laboratory engineer who led the human-factors review, wrote that "the fratricides were incidents waiting to happen." The Army "had trusted the system in a naïve manner," had "not adequately prepared their operators and crews for proper oversight of automated operations," and after Desert Storm had reduced both crew experience and individual training.<sup><a href="#r2">2</a></sup> <span class="tier p">PRIMARY</span></p>
+  <blockquote class="q">"How do you establish vigilance at the proper time? 23 hours and 59 minutes of boredom followed by one minute of panic."<cite>Maj. Gen. Michael Vane, quoted in Hawley (2017)<sup><a href="#r2">2</a></sup></cite></blockquote>
+  <p>Hawley's conclusion runs against the usual sales pitch for automation: "automation does not always lessen operator training requirements." It changes what the operator has to be good at.<sup><a href="#r2">2</a></sup> <span class="tier p">PRIMARY</span></p>
+  <blockquote class="finding"><b>Finding 1.</b> The last large-scale case of automation outrunning operator preparation produced fratricide at a rate of two in eleven engagements, and the investigator attributed it to trust and training as much as to the machine.</blockquote>
+
+  <h3 class="sec"><span class="num">2.3</span>What the research already knows (RQ-3)</h3>
+  <p>Patriot's failures were predictable from literature that was already decades old. Hawley cites Bradshaw, Hoffman, Johnson and Woods, who catalogued the beliefs behind such failures as "the seven deadly myths of 'autonomous systems.'"<sup><a href="#r11">11</a></sup> <span class="tier p">PRIMARY</span> Four findings explain most of the mechanism.</p>
+  <div class="tablewrap"><table class="bt">
+    <caption><b>Table 2.</b> Four human-factors findings and what each means for a targeting cell.</caption>
+    <thead><tr><th>Finding</th><th>Source</th><th>Implication at the decision point</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Misuse and disuse</td><td class="src">Parasuraman &amp; Riley 1997<sup><a href="#r7">7</a></sup></td><td>Operators fail in both directions, over-relying and under-relying, and the two failures need opposite fixes</td></tr>
+      <tr><td class="k">Trust replaces understanding</td><td class="src">Lee &amp; See 2004<sup><a href="#r8">8</a></sup></td><td>Trust guides reliance "when complexity and unanticipated situations make a complete understanding of the automation impractical." The target is reliance matched to actual capability</td></tr>
+      <tr><td class="k">Monitoring is hard work</td><td class="src">Warm, Parasuraman &amp; Matthews 2008<sup><a href="#r10">10</a></sup></td><td>Watching for rare events carries high workload and raises distress, with automated systems named as the main application</td></tr>
+      <tr><td class="k">Bias survives training</td><td class="src">Parasuraman &amp; Manzey 2010<sup><a href="#r9">9</a></sup></td><td>Automation bias produces omissions and commissions, appears in experts and teams, and "cannot be prevented by training or instructions"</td></tr>
+    </tbody>
+  </table></div>
+  <blockquote class="finding"><b>Finding 2.</b> Training is necessary, as Patriot showed, and insufficient, as the bias literature shows. The rest of the remedy lies in how a system displays its confidence, paces its recommendations and makes a dismissal as easy as an approval.</blockquote>
+
+  <h3 class="sec"><span class="num">2.4</span>The same pressure in 2026</h3>
+  <p>On March 2, 2026, during Operation Epic Fury, three U.S. F-15E Strike Eagles went down over Kuwait in what CENTCOM called an apparent friendly-fire incident attributed to Kuwaiti air defenses. All six crew were recovered, and both CENTCOM and Kuwait opened investigations.<sup><a href="#r3">3</a></sup> <span class="tier r">REPORTED</span> Two days later the Wall Street Journal reported early findings that a Kuwaiti F/A-18 pilot may have fired on the jets after misidentifying them; other outlets pointed to Kuwait's Patriot batteries.<sup><a href="#r12">12</a></sup> <span class="tier r">REPORTED</span> No official findings have been published. By early March, Gulf partners reported intercepting 500 missiles and 1,300 drones.<sup><a href="#r6">6</a></sup> <span class="tier p">PRIMARY</span> Whichever account holds, both describe a person deciding under saturation whether a fast track is friend or threat. <span class="tier i">INFERENCE</span></p>
+
+  <h3 class="sec"><span class="num">2.5</span>What policy asks for (RQ-4)</h3>
+  <p>DoD Directive 3000.09, updated in January 2023, requires autonomous and semi-autonomous weapon systems to be designed so that commanders and operators can "exercise appropriate levels of human judgment over the use of force."<sup><a href="#r4">4</a></sup> <span class="tier p">PRIMARY</span> The directive sets the requirement. It does not define what judgment a person can sustain, at what decision rate, over what length of shift. <span class="tier i">INFERENCE</span></p>
+
+  <h2 class="ch"><span class="num">3</span>&ensp;Four measurable design limits</h2>
+  <p>Each limit below turns the directive's requirement into something a program office could test. Each is a proposal that has not been validated. <span class="tier i">INFERENCE</span></p>
+  <div class="tablewrap"><table class="bt">
+    <caption><b>Table 3.</b> Design limits for the human decision point. Proposed; not yet validated.</caption>
+    <thead><tr><th>Limit</th><th>What to measure</th><th>Grounding</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Validated decision rate</td><td>The decisions per operator-hour at which accuracy was demonstrated, stated like a sensor's refresh rate</td><td class="src">Table 1; Army goal<sup><a href="#r1">1</a></sup></td></tr>
+      <tr><td class="k">Dismissal quality</td><td>How often operators correctly reject a wrong recommendation, scored against ground truth</td><td class="src">Dismissals count as decisions<sup><a href="#r1">1</a></sup></td></tr>
+      <tr><td class="k">Trust calibration</td><td>Operator acceptances and overrides against ground truth, by target type and condition</td><td class="src">Lee &amp; See<sup><a href="#r8">8</a></sup>; Hawley<sup><a href="#r2">2</a></sup></td></tr>
+      <tr><td class="k">Vigilance over a shift</td><td>Detection accuracy across a full watch, against the operator's first hour</td><td class="src">Warm et al.<sup><a href="#r10">10</a></sup>; Vane<sup><a href="#r2">2</a></sup></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="ch"><span class="num">4</span>&ensp;Limitations</h2>
+  <ol class="lim">
+    <li>CSET's figures describe one corps and one software system, and the thousand-decision goal is an aspiration.</li>
+    <li>Table 1 is my arithmetic and shows bounds; the real distribution of decisions across a cell is unknown.</li>
+    <li>Patriot's 2003 failures predate current software. Hawley's account is one investigator's, though he led the Army's review.</li>
+    <li>The Kuwait incident is unexplained, and nothing here is a claim about its cause.</li>
+    <li>The human-factors findings come largely from laboratory and aviation settings; their size in combat targeting is untested.</li>
+    <li>The design limits are proposals and have not been validated.</li>
+  </ol>
+
+  <h2 class="ch"><span class="num">5</span>&ensp;Conclusion</h2>
+  <p>Software removed the staff from the kill chain and kept the decisions. The people left behind inherit a decision rate no earlier cell faced, in conditions the human-factors literature has described for decades. Patriot showed that training matters. Parasuraman and Manzey's review finds that training alone stops short. What remains is to measure the human decision point with the same precision engineers already apply to the sensors that feed it.</p>
+
+  <h2 class="ch">References</h2>
+  <div class="refs">
+    <p id="r1">[1] Probasco, E. (2024). <em>Building the Tech Coalition: How Project Maven and the U.S. 18th Airborne Corps Operationalized Software and Artificial Intelligence for the Department of Defense</em>. Center for Security and Emerging Technology. <a href="https://cset.georgetown.edu/wp-content/uploads/CSET-Building-the-Tech-Coalition-1.pdf">cset.georgetown.edu</a></p>
+    <p id="r2">[2] Hawley, J. K. (2017). <em>Patriot Wars: Automation and the Patriot Air and Missile Defense System</em>. Center for a New American Security. <a href="https://www.cnas.org/publications/reports/patriot-wars">cnas.org</a></p>
+    <p id="r3">[3] U.S. Central Command (2026, Mar 2). Three U.S. F-15s involved in friendly fire incident in Kuwait; pilots safe. Archived by Iran Watch. <a href="https://www.iranwatch.org/library/governments/united-states/executive-branch/department-defense/us-centcom-three-us-f-15s-involved-friendly-fire-incident-kuwait-pilots-safe">iranwatch.org</a></p>
+    <p id="r4">[4] U.S. Department of Defense (2023, Jan 25). Directive 3000.09, <em>Autonomy in Weapon Systems</em>. <a href="https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodd/300009p.PDF">esd.whs.mil</a>. Quoted language confirmed current in CRS Insight IN12669 (updated 2026-04-21).</p>
+    <p id="r5">[5] Brose, C. (2020). <em>The Kill Chain: Defending America in the Future of High-Tech Warfare</em>. Hachette.</p>
+    <p id="r6">[6] Cancian, M. F. &amp; Park, C. H. (2026, Mar 5). $3.7 billion: Estimated cost of Epic Fury's first 100 hours. CSIS. <a href="https://www.csis.org/analysis/37-billion-estimated-cost-epic-furys-first-100-hours">csis.org</a></p>
+    <p id="r7">[7] Parasuraman, R. &amp; Riley, V. (1997). Humans and automation: Use, misuse, disuse, abuse. <em>Human Factors, 39</em>(2), 230–253. <a href="https://doi.org/10.1518/001872097778543886">doi:10.1518/001872097778543886</a></p>
+    <p id="r8">[8] Lee, J. D. &amp; See, K. A. (2004). Trust in automation: Designing for appropriate reliance. <em>Human Factors, 46</em>(1), 50–80. <a href="https://doi.org/10.1518/hfes.46.1.50_30392">doi:10.1518/hfes.46.1.50_30392</a></p>
+    <p id="r9">[9] Parasuraman, R. &amp; Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. <em>Human Factors, 52</em>(3), 381–410. <a href="https://doi.org/10.1177/0018720810376055">doi:10.1177/0018720810376055</a></p>
+    <p id="r10">[10] Warm, J. S., Parasuraman, R. &amp; Matthews, G. (2008). Vigilance requires hard mental work and is stressful. <em>Human Factors, 50</em>(3), 433–441. <a href="https://doi.org/10.1518/001872008X312152">doi:10.1518/001872008X312152</a></p>
+    <p id="r11">[11] Bradshaw, J. M., Hoffman, R. R., Johnson, M. &amp; Woods, D. D. (2013). The seven deadly myths of "autonomous systems." <em>IEEE Intelligent Systems, 28</em>(3), 54–61. <a href="https://doi.org/10.1109/MIS.2013.70">doi:10.1109/MIS.2013.70</a></p>
+    <p id="r12">[12] AeroTime (2026, Mar 4). Kuwaiti F/A-18 may have shot down three USAF F-15Es: WSJ. <a href="https://www.aerotime.aero/articles/kuwaiti-fa18-shot-down-three-us-f15e-friendly-fire-wsj">aerotime.aero</a></p>
+  </div>
+
+  <div class="colophon">
+    Marion Moranetz runs a referral-only neurotech and aerospace think tank.<br>
+    Cite as: Moranetz, M. (2026). One targeting decision every 3.6 seconds. <em>Field Notes on the Operator Layer</em>, No. 2.<br>
+    Evidence tiers: PRIMARY · REPORTED · ESTIMATE · INFERENCE. Corrections welcome.
+  </div>
+  <nav class="next"><a href="../340000-drones/">← No. 1</a><a href="../4-million-answer/">No. 3 →</a></nav>
+</div>
+</body>
+</html>

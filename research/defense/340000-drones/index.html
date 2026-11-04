@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Militaries can buy drones faster than they can qualify people to fly them. Open-source evidence from Ukraine, Russia and the U.S. Army, and a six-measure readiness specification.">
+<meta property="og:title" content="340,000 Drones, 3,000 Dedicated Pilots">
+<meta property="og:description" content="Militaries can buy drones faster than they can qualify people to fly them. Open-source evidence from Ukraine, Russia and the U.S. Army, and a six-measure readiness specification.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moranetz.github.io/research/defense/340000-drones/">
+<meta name="author" content="Marion Moranetz">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>340,000 Drones, 3,000 Dedicated Pilots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../field-notes.css">
+</head>
+<body>
+<div class="page">
+  <div class="series"><a href="/research/#defense">Field Notes on the Operator Layer</a><span>No. 1 · November 2026</span></div>
+
+  <div class="titleblock">
+    <div class="kicker">Open-Source Review · v1.0 · Every Source Linked</div>
+    <h1 class="title">340,000 Drones, 3,000 Dedicated Pilots</h1>
+    <div class="subtitle">The Army plans about 340,000 small drones and projects 2,000 to 3,000 soldiers whose full-time job is flying drones. Evidence from Ukraine, Russia and the U.S. Army on who will fly the rest, and a proposed readiness specification</div>
+    <div class="byline"><span class="name">Marion Moranetz</span></div>
+    <div class="affil">Independent research</div>
+    <div class="vermeta">2026-11 · every claim tagged by evidence tier · primary documents read at source where available</div>
+  </div>
+
+  <div class="abstract">
+    <div class="lab">Abstract</div>
+    <p>Militaries can now buy small drones faster than they can qualify people to fly them. I assemble the open-source evidence for that gap from three forces and test it against the training literature. RUSI's field interviews put the share of Ukrainian FPV drones that fail to reach their target at <b>60–80%</b>, and name operator skill as one of two drivers. The U.S. Army plans about <b>340,000</b> small drones over two years against a projected <b>2,000–3,000</b> dedicated drone specialists, and the commander of that pipeline names training capacity as his limiting factor. Russia's Rubicon center, built partly to train instructors, grew from about 1,450 to about 5,000 personnel in a year, and analysts report that standards fell. Two meta-analyses predict steep skill decay for accuracy-based tasks (<span class="mono">d = −1.4</span> after a year without practice) and favor performance-paced over time-based training. Every drone course I found is defined by its length. Training is necessary and insufficient, because automation bias survives it. I close with a six-measure readiness specification that would settle these questions. No program I could find reports any of the six publicly.</p>
+    <div class="keywords">Keywords: unmanned aircraft systems · operator training · skill decay · simulator transfer · human-systems integration</div>
+  </div>
+  <hr class="rule-cap">
+
+  <h2 class="ch"><span class="num">1</span>&ensp;Introduction</h2>
+  <p>Coverage of the drone war is mostly about hardware: unit costs, production rates, jamming and range. The people flying the drones appear in that coverage as a given. This review treats them as the variable. If operator skill drives a large share of drone effectiveness, and if qualification capacity lags procurement, then the constraint on drone warfare is a training problem, and the measurements that would settle it are almost entirely missing from the public record.</p>
+
+  <h3 class="sec"><span class="num">1.1</span>Research questions</h3>
+  <ul class="rq">
+    <li><span class="tag">RQ-1</span>Does current open-source evidence attribute drone effectiveness to operator skill?</li>
+    <li><span class="tag">RQ-2</span>How does the capacity to qualify operators compare with the rate of drone procurement?</li>
+    <li><span class="tag">RQ-3</span>What does the training literature predict about skill decay and course design for this kind of task?</li>
+    <li><span class="tag">RQ-4</span>Does autonomy remove the constraint?</li>
+    <li><span class="tag">RQ-5</span>What would a buyer need measured to judge a training program?</li>
+  </ul>
+
+  <h3 class="sec"><span class="num">1.2</span>Method and evidence tiers</h3>
+  <p>This is a structured review of public sources, not an instrumented study. Each factual claim carries one of four tiers, fixed before writing and applied uniformly:</p>
+  <div class="defs">
+    <div class="d"><span class="tier p">PRIMARY</span> <b>Primary</b>: an official document, field report or peer-reviewed paper, read at source.</div>
+    <div class="d"><span class="tier r">REPORTED</span> <b>Reported</b>: an official statement or figure as reported by a named outlet.</div>
+    <div class="d"><span class="tier e">ESTIMATE</span> <b>Estimate</b>: a secondary analyst estimate, or a figure that sources disagree on.</div>
+    <div class="d"><span class="tier i">INFERENCE</span> <b>Inference</b>: my reasoning from the above, labeled so it can be checked.</div>
+  </div>
+  <p>Where sources conflicted, I used the lower figure or reported the range. Quotations were checked against the source text.</p>
+
+  <h2 class="ch"><span class="num">2</span>&ensp;Findings</h2>
+
+  <h3 class="sec"><span class="num">2.1</span>Skill appears in the failure rate (RQ-1)</h3>
+  <p>Jack Watling and Nick Reynolds of RUSI interviewed Ukrainian officers across multiple axes in the war's third year. They report that "between 60 and 80% of Ukrainian FPVs fail to reach their target, depending on the part of the front and the skill of the operators," and that of those striking armored vehicles, a majority fail to destroy the target.<sup><a href="#r1">1</a></sup> <span class="tier p">PRIMARY</span> The same report credits tactical drones with 60–70% of damaged and destroyed Russian systems.<sup><a href="#r1">1</a></sup> <span class="tier p">PRIMARY</span></p>
+  <p>Both figures hold at once. Drones are the dominant weapon and most of them miss. RUSI names two drivers of the variation, sector (largely jamming and terrain) and operator skill. Since that report, fiber-optic control has spread. David Axe reports that most Russian FPVs now fly on jam-proof cable, citing Frontelligence Insight's estimate of 60% fiber models in certain key sectors.<sup><a href="#r12">12</a></sup> <span class="tier e">ESTIMATE</span> A cable-guided drone removes jamming from its failure rate, leaving more of what remains to the operator. No fiber-era hit rate has been published to test this. <span class="tier i">INFERENCE</span></p>
+
+  <h3 class="sec"><span class="num">2.2</span>Qualification capacity lags procurement (RQ-2)</h3>
+  <p>The Drone Dominance program plans about 340,000 small drones over two years for $1 billion. Secretary Pete Hegseth promised "hundreds of thousands of them by 2027."<sup><a href="#r7">7</a></sup> <span class="tier p">PRIMARY</span> Against that, the Army's dedicated drone specialty (15X) projects 2,000 to 3,000 soldiers, expects 770 trained by the end of 2026, and is limited by training infrastructure.<sup><a href="#r3">3</a></sup> <span class="tier r">REPORTED</span></p>
+
+  <figure class="fig">
+    <svg class="chart" viewBox="0 0 640 192" role="img" aria-label="Log scale: about 340,000 small drones planned over two years; 2,000 to 3,000 15X specialists projected; 770 trained by end of 2026; 28 students in the first UALC class">
+      <g stroke="var(--grid)">
+        <line x1="200" x2="200" y1="6" y2="166"/><line x1="282" x2="282" y1="6" y2="166"/><line x1="364" x2="364" y1="6" y2="166"/><line x1="446" x2="446" y1="6" y2="166"/><line x1="528" x2="528" y1="6" y2="166"/><line x1="610" x2="610" y1="6" y2="166"/>
+      </g>
+      <g font-size="11" text-anchor="middle"><text x="200" y="184">10</text><text x="282" y="184">100</text><text x="364" y="184">1K</text><text x="446" y="184">10K</text><text x="528" y="184">100K</text><text x="610" y="184">1M</text></g>
+      <g font-size="13" text-anchor="end"><text class="lab" x="190" y="32">Small drones planned, 2 yrs</text><text class="lab" x="190" y="70">15X specialists, projected</text><text class="lab" x="190" y="108">15X trained by end 2026</text><text class="lab" x="190" y="146">UALC pilot class</text></g>
+      <rect x="200" y="18" width="372" height="20" fill="var(--chart-a)"/>
+      <rect x="200" y="56" width="189" height="20" fill="var(--chart-b)"/><rect x="389" y="56" width="14" height="20" fill="var(--chart-b)" opacity=".45"/>
+      <rect x="200" y="94" width="155" height="20" fill="var(--chart-b)"/>
+      <rect x="200" y="132" width="37" height="20" fill="var(--chart-c)"/>
+      <g font-size="11.5"><text x="578" y="32">~340,000</text><text x="409" y="70">2,000–3,000</text><text x="361" y="108">770</text><text x="243" y="146">28</text></g>
+    </svg>
+    <figcaption><b>Figure 1.</b> Small drones planned against Army drone specialists, log scale. These are different populations: 15X soldiers mostly operate larger systems, and squad drones are flown as an additional duty. The figure compares orders of magnitude only. Sources: U.S. Army<sup><a href="#r7">7</a></sup><sup><a href="#r2">2</a></sup>; Common Defense<sup><a href="#r3">3</a></sup>.</figcaption>
+  </figure>
+
+  <div class="tablewrap"><table class="bt">
+    <caption><b>Table 1.</b> Published drone-operator courses. Every one is defined by duration.</caption>
+    <thead><tr><th>Program</th><th>Length</th><th>Detail</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Dronarium Academy FPV (Kyiv, Lviv)</td><td class="num">15 days · 100 h</td><td class="src">Certified by Ukraine's MoD aviation directorate; counts toward a military specialty<sup><a href="#r5">5</a></sup></td><td><span class="tier p">PRIMARY</span></td></tr>
+      <tr><td class="k">U.S. Army Unmanned Advanced Lethality Course</td><td class="num">3 weeks</td><td class="src">28 students in pilot class; 20–25 simulator hours before live flight<sup><a href="#r2">2</a></sup></td><td><span class="tier p">PRIMARY</span></td></tr>
+      <tr><td class="k">U.S. Army 15X, tactical UAS specialist</td><td class="num">15 weeks</td><td class="src">After basic training; 250+ graduated, 770 expected by year end<sup><a href="#r3">3</a></sup></td><td><span class="tier r">REPORTED</span></td></tr>
+    </tbody>
+  </table></div>
+
+  <p>The people running these programs describe the gap plainly.</p>
+  <blockquote class="q">"My limiting factor right now is infrastructure on how many folks I can train."<cite>Col. Michael Gourgues, commander, 1st Aviation Brigade, 2026-09<sup><a href="#r3">3</a></sup></cite></blockquote>
+  <blockquote class="q">"This course is a catch-up." … "We're behind globally, and this is our aggressive attempt to close that gap."<cite>Capt. Rachel Martin, UALC course director, 2025-08<sup><a href="#r2">2</a></sup></cite></blockquote>
+  <blockquote class="q">"We still have a little bit of work to do in terms of getting qualified pilots down to the squad level."<cite>Col. Gregory Merkl, Army drone dominance lead, 2026-09<sup><a href="#r6">6</a></sup></cite></blockquote>
+  <p>The same gap is opening on the ground. Ukrainian ground robots ran about 112,000 logistics and evacuation missions between January and early September 2026, more than 25,000 of them in August.<sup><a href="#r10">10</a></sup> <span class="tier r">REPORTED</span> The reporting gives no figure for operators per robot. Budgets show the same blind spot. Britain's 2026 Defence Investment Plan lists over £5 billion for autonomous systems and a £360 million Jet Training System for pilots. I found no line for qualifying drone operators.<sup><a href="#r11">11</a></sup> <span class="tier p">PRIMARY</span></p>
+
+  <h3 class="sec"><span class="num">2.3</span>Russia built an instructor institution, then outgrew it</h3>
+  <p>Rob Lee and Dmytro Putiata of FPRI have mapped Rubicon, the Center for Advanced Unmanned Technologies, from open sources. It was established on August 2, 2024, and includes an instructor training center whose training department has six platoons of 18. It trains drone and counter-drone crews from conventional units, and its combat detachments test tactics that then spread across the force.<sup><a href="#r4">4</a></sup> <span class="tier e">ESTIMATE</span></p>
+  <p>Its strength rose from about 1,450 in March 2025 to about 5,000 by spring 2026, with authorized strength raised to 9,000. Lee and Putiata report that expansion lowered recruitment and training standards and drew talent from conventional units, and they warn that "attempts to increase size too rapidly will result in a drop in quality."<sup><a href="#r4">4</a></sup> <span class="tier e">ESTIMATE</span></p>
+  <blockquote class="finding"><b>Finding 1.</b> On every force examined, the binding input is qualified people, and above all instructors. Russia's attempt to scale its instructor institution faster than it could train instructors is the clearest public case of what happens when that input is forced.</blockquote>
+
+  <h3 class="sec"><span class="num">2.4</span>What the training literature predicts (RQ-3)</h3>
+  <h3 class="sec"><span class="num">2.4.1</span>Skill decay</h3>
+  <p>Arthur, Bennett, Stanush and McNelly pooled 189 data points from 53 studies. Skill loss grew from almost nothing right after training (<span class="mono">d = −0.01</span>) to a large effect after more than a year without practice (<span class="mono">d = −1.4</span>). Cognitive, artificial and accuracy-based tasks decayed more than physical, natural and speed-based tasks.<sup><a href="#r8">8</a></sup> <span class="tier p">PRIMARY</span> Flying a strike drone through goggles toward a small target falls on the decay-prone side of each contrast. That classification has not been tested on drone operators. <span class="tier i">INFERENCE</span></p>
+  <h3 class="sec"><span class="num">2.4.2</span>Course design</h3>
+  <p>Hays, Jacobs, Prince and Salas's meta-analysis of flight-simulator research found that simulators combined with aircraft training consistently outperformed aircraft training alone for jet pilots, and that performance-paced training was on average more effective than lock-step training.<sup><a href="#r9">9</a></sup> <span class="tier p">PRIMARY</span> Every course in Table 1 is lock-step by construction.</p>
+  <h3 class="sec"><span class="num">2.4.3</span>Limits of training</h3>
+  <p>Parasuraman and Manzey found that automation bias appears in experts as well as novices and "cannot be prevented by training or instructions."<sup><a href="#r15">15</a></sup> <span class="tier p">PRIMARY</span> Training is necessary and insufficient. The remainder has to be designed into the system, which <a href="../3-6-seconds/">Note No. 2</a> takes up.</p>
+
+  <h3 class="sec"><span class="num">2.5</span>Autonomy moves the operator into supervision (RQ-4)</h3>
+  <p>The strongest objection to this review is that terminal guidance and onboard autonomy will make operator skill irrelevant. Current evidence points the other way. Ukraine's cheapest interceptor drones still have a human take manual control for the final seconds of an intercept.<sup><a href="#r13">13</a></sup> <span class="tier r">REPORTED</span> Where autonomy does take a task, the operator becomes its supervisor. John Hawley, who led the Army Research Laboratory's review of Patriot's 2003 fratricides, called the belief that automation reduces required expertise "one of the most common myths about automation," and found that it instead changes the operator's performance demands.<sup><a href="#r14">14</a></sup> <span class="tier p">PRIMARY</span></p>
+
+  <h2 class="ch"><span class="num">3</span>&ensp;A proposed readiness specification (RQ-5)</h2>
+  <p>The measurements that would settle these questions are cheap compared with the drones they protect, and none appears in any public source I found. Table 2 is the set I would hold a training program, or a vendor's training claim, to. Each becomes a pass-or-fail test once a threshold is set.</p>
+  <div class="tablewrap"><table class="bt">
+    <caption><b>Table 2.</b> Six measures for operator readiness. Proposed; not yet validated.</caption>
+    <thead><tr><th>Measure</th><th>Definition</th><th>Why a buyer needs it</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Time-to-standard</td><td>Training hours until an operator reaches a stated success rate on a stated task, reported as a distribution across trainees</td><td class="src">Replaces course length with the output a commander needs<sup><a href="#r9">9</a></sup></td></tr>
+      <tr><td class="k">Retention curve</td><td>Success rate retested at 30, 90 and 180 days without practice</td><td class="src">Sets the refresher interval; decay is predicted to be steep for this task type<sup><a href="#r8">8</a></sup></td></tr>
+      <tr><td class="k">Simulator transfer</td><td>Live-flight hours saved per simulator hour, measured against a live-only group</td><td class="src">Prices the 20–25 simulator hours already in the U.S. course<sup><a href="#r2">2</a></sup></td></tr>
+      <tr><td class="k">Performance under load</td><td>Success rate under jamming, at night and after a full shift, against the rested baseline</td><td class="src">Says which qualified operators are qualified for tonight</td></tr>
+      <tr><td class="k">Instructor leverage</td><td>Operators brought to standard per instructor-week, standard held fixed</td><td class="src">The constraint Rubicon broke and the Army commander named<sup><a href="#r3">3</a></sup><sup><a href="#r4">4</a></sup></td></tr>
+      <tr><td class="k">Operators per platform</td><td>People needed per drone or ground robot in service, including relief</td><td class="src">Converts a hardware order into a staffing plan<sup><a href="#r10">10</a></sup></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="ch"><span class="num">4</span>&ensp;Limitations</h2>
+  <ol class="lim">
+    <li>The 60–80% failure range comes from officer interviews and dates from early 2025. No instrumented dataset backs it.</li>
+    <li>Fiber-optic adoption figures are secondary estimates. The claim that fiber shifts failures toward operator skill is my inference and is untested.</li>
+    <li>Rubicon's figures come from open-source analysis and are not confirmed by Russian primary sources.</li>
+    <li>Course lengths are published curricula and may differ from what units actually run.</li>
+    <li>Both meta-analyses predate drone warfare. Applying them to FPV operators is an extrapolation.</li>
+    <li>Figure 1 places different populations on one axis and should be read for magnitude only.</li>
+    <li>The readiness specification is a proposal and has not been validated against outcomes.</li>
+  </ol>
+
+  <h2 class="ch"><span class="num">5</span>&ensp;Conclusion</h2>
+  <p>Across three forces, the public record shows the same pattern. Drones arrive in hundreds of thousands, qualified operators in thousands, and instructors are the input that breaks when pushed. The training literature has predicted the consequences for decades: steep decay for this kind of skill, and better results from training to a standard than to a calendar. What the record lacks is measurement. The six measures in Table 2 would turn this argument into data.</p>
+
+  <h2 class="ch">References</h2>
+  <div class="refs">
+    <p id="r1">[1] Watling, J. &amp; Reynolds, N. (2025). <em>Tactical Developments During the Third Year of the Russo–Ukrainian War</em>. Royal United Services Institute. <a href="https://static.rusi.org/tactical-developments-third-year-russo-ukrainian-war-february-2205.pdf">static.rusi.org</a></p>
+    <p id="r2">[2] U.S. Army (2025, Aug 18). U.S. Army Aviation Center of Excellence launches Unmanned Advanced Lethality Course. <a href="https://www.army.mil/article/287907/u_s_army_aviation_center_of_excellence_launches_unmanned_advanced_lethality_course_to_equip_soldiers_for_future_warfare">army.mil</a></p>
+    <p id="r3">[3] Loveland, B. (2026, Sep 1). Army's new drone soldiers are already graduating into modern warfare. <em>Common Defense</em>. <a href="https://www.commondef.com/2026/09/armys-new-drone-soldiers-are-already-graduating-into-modern-warfare/">commondef.com</a></p>
+    <p id="r4">[4] Lee, R. &amp; Putiata, D. (2026, Jun 12). Inside Rubicon: The structure of Russia's elite drone center. Foreign Policy Research Institute. <a href="https://www.fpri.org/article/2026/06/inside-rubicon-the-structure-of-russias-elite-drone-center/">fpri.org</a></p>
+    <p id="r5">[5] Dronarium Academy. FPV course. <a href="https://www.dronarium.academy/en/courses/fpv">dronarium.academy</a></p>
+    <p id="r6">[6] <em>Military Times</em> (2026, Sep 18). As experimental drone battalion ends, Army aims to push drones to every squad. <a href="https://www.militarytimes.com/news/your-military/2026/09/18/as-experimental-drone-battalion-ends-army-aims-to-push-drones-to-every-squad/">militarytimes.com</a></p>
+    <p id="r7">[7] U.S. Army (2025, Dec 3). War Department asks industry to make more than 300K drones, quickly, cheaply. <a href="https://www.army.mil/article/289322/war_department_asks_industry_to_make_more_than_300k_drones_quickly_cheaply">army.mil</a></p>
+    <p id="r8">[8] Arthur, W., Jr., Bennett, W., Jr., Stanush, P. L. &amp; McNelly, T. L. (1998). Factors that influence skill decay and retention: A quantitative review and analysis. <em>Human Performance, 11</em>(1), 57–101. <a href="https://doi.org/10.1207/s15327043hup1101_3">doi:10.1207/s15327043hup1101_3</a></p>
+    <p id="r9">[9] Hays, R. T., Jacobs, J. W., Prince, C. &amp; Salas, E. (1992). Flight simulator training effectiveness: A meta-analysis. <em>Military Psychology, 4</em>(2), 63–74. <a href="https://doi.org/10.1207/s15327876mp0402_1">doi:10.1207/s15327876mp0402_1</a></p>
+    <p id="r10">[10] United24 Media (2026, Sep 7). Ukraine's ground robots complete 112,000 logistics and evacuation missions in 2026 (citing Ukraine's Ministry of Defence). <a href="https://united24media.com/war-in-ukraine/ukraines-ground-robots-complete-112000-logistics-and-evacuation-missions-in-2026-22306">united24media.com</a></p>
+    <p id="r11">[11] UK Ministry of Defence (2026). <em>The Defence Investment Plan</em>. <a href="https://assets.publishing.service.gov.uk/media/6a44e989167a99cf0018da38/The_Defence_Investment_Plan.pdf">gov.uk</a></p>
+    <p id="r12">[12] Axe, D. (2026, Aug 6). How Russia built a jam-proof drone force. <em>Euromaidan Press</em>. <a href="https://euromaidanpress.com/2026/08/06/unjammable-russian-drones/">euromaidanpress.com</a></p>
+    <p id="r13">[13] <em>Military Times</em> (2026, Mar 11). These are Ukraine's $1,000 interceptor drones the Pentagon wants to buy. <a href="https://www.militarytimes.com/news/pentagon-congress/2026/03/11/these-are-ukraines-1000-interceptor-drones-the-pentagon-wants-to-buy/">militarytimes.com</a></p>
+    <p id="r14">[14] Hawley, J. K. (2017). <em>Patriot Wars: Automation and the Patriot Air and Missile Defense System</em>. Center for a New American Security. <a href="https://www.cnas.org/publications/reports/patriot-wars">cnas.org</a></p>
+    <p id="r15">[15] Parasuraman, R. &amp; Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. <em>Human Factors, 52</em>(3), 381–410. <a href="https://doi.org/10.1177/0018720810376055">doi:10.1177/0018720810376055</a></p>
+  </div>
+
+  <div class="colophon">
+    Marion Moranetz runs a referral-only neurotech and aerospace think tank.<br>
+    Cite as: Moranetz, M. (2026). 340,000 drones, 3,000 dedicated pilots. <em>Field Notes on the Operator Layer</em>, No. 1.<br>
+    Evidence tiers: PRIMARY · REPORTED · ESTIMATE · INFERENCE. Corrections welcome.
+  </div>
+  <nav class="next"><a href="/research/#defense">← All notes</a><a href="../3-6-seconds/">No. 2 →</a></nav>
+</div>
+</body>
+</html>
