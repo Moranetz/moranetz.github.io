@@ -45,7 +45,7 @@ Applied behavioral scientist who builds measurement systems for human decision-m
 
 - **34 iOS applications (Swift/SwiftUI)** including persuasion measurement trainers, narrative experiences, creature/ecology simulations, and ambient wellness tools. Each built with behavioral measurement as core architecture.
 
-- **39 browser-based projects (React/Canvas)** including influence detection tools, generative experiences, and a 14-game casino platform (ARCANE) with provably fair outcome verification.
+- **39 browser-based projects (React/Canvas)** including influence detection tools and generative experiences.
 
 ---
 

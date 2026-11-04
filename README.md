@@ -1,6 +1,6 @@
 # moranetz.github.io
 
-Portfolio site for Marion Moranetz — indie iOS founder, persuasion-systems builder, AE candidate.
+Portfolio site for Marion Moranetz: research on human performance in autonomous systems.
 
 This repo is the public front door for the surrounding body of work. Its job is not to be technically impressive. Its job is to make the right projects legible fast.
 
