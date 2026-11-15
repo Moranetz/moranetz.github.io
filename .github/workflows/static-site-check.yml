@@ -25,7 +25,7 @@ jobs:
           test -f 404.html
           python3 - <<'PY'
           from pathlib import Path
-          pages = [Path("index.html"), Path("privacy-policy.html"), Path("persuasion-max.html")]
+          pages = [Path("index.html"), Path("persuasion-max.html"), Path("resume.html")]
           for path in pages:
               text = path.read_text()
               assert "<title>" in text, f"{path} is missing a title tag"
